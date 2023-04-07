@@ -1,0 +1,110 @@
+@import "/assets/font.css";
+body {
+    font-family:"Laila-Regular";
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        180deg,  
+        rgb(255, 251, 190,1) 0%, 
+        rgb(255, 251, 190,0.7) 25%, 
+        rgba(255, 251, 211, 1) 30.5%, 
+        rgba(255, 251, 211, 0.8) 52.08%);
+    background-attachment: fixed;
+
+  z-index: -1;
+  
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff9900 ;
+    height:auto;
+    border-radius: 100px;
+  }
+  
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background-color: #e28800 ;
+}
+ 
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+        180deg,  
+        rgb(255, 251, 190,1) 0%, 
+  
+        rgb(255, 251, 190,0.7) 25%, 
+        rgba(255, 251, 211, 1) 30.5%, 
+        rgba(255, 251, 211, 0.8) 52.08%);
+  }
+  
+  /* Hide scrollbar when not scrolling */
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background-color: transparent;
+  }
+
+
+h1 {
+    padding-top: 5%;
+    display: flex;
+    font-size: 48px;
+    /* font-weight: bold; */
+    justify-content: center;
+    margin:20px;
+
+}
+
+.description{
+    padding-top: 10px;
+    width: 90%;
+    font-size: 200%;
+    text-align: center;
+    line-height:200%;
+    margin: auto;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .solution .box {
+    margin: auto;
+  }
+  .solution .box .explain{
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  
+}
+
+
+
+/* a button with 450px width and 120px height  */
+.button{
+    width: 250px;
+    height:auto;
+    padding: 20px;;
+    background-color: #ff693b;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family:"Laila-Bold";
+    color: white;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+

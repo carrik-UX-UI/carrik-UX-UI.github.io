@@ -1,0 +1,232 @@
+@import "/assets/font.css";
+body {
+    font-family:"Laila-Regular";
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        180deg,  
+        rgb(255, 251, 190,1) 0%, 
+        rgb(255, 251, 190,0.7) 25%, 
+        rgba(255, 251, 211, 1) 30.5%, 
+        rgba(255, 251, 211, 0.8) 52.08%);
+
+  z-index: -1;
+  
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff9900 ;
+    height:auto;
+    border-radius: 100px;
+  }
+  
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background-color: #e28800 ;
+}
+ 
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+        180deg,  
+        rgb(255, 251, 190,1) 0%, 
+  
+        rgb(255, 251, 190,0.7) 25%, 
+        rgba(255, 251, 211, 1) 30.5%, 
+        rgba(255, 251, 211, 0.8) 52.08%);
+  }
+  
+  /* Hide scrollbar when not scrolling */
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background-color: transparent;
+  }
+
+
+.to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2%;
+}
+
+
+.hero {
+    background: linear-gradient(180deg, #ff912b 0%, #ff912b 20%, #ff693b 100%);
+    position: relative;
+    width: 90%;
+    margin:auto;
+    margin-top: 100px; /* Add margin-top to move hero image below navigation bar */
+    border-radius: 20px;
+}
+
+.hero img{
+    /* padding: 30px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    align-content: center;
+}
+
+.title{
+    width: 60%;
+    align-content: center;
+    padding: 60px;
+}
+
+
+.date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    /* font-weight: bold; */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.brief{
+    padding-top: 50px;
+    width: 90%;
+    font-size: 28px;
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    font-family:"Laila-Bold";
+    font-size: 32px;
+    font-weight: bold;
+    padding-left: 5%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-family:"Laila-Medium";
+    font-weight: 580;
+    font-size: 30px;
+    padding-left: 5%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 30px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.responsive-image {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.solution{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+
+.solution .box{
+    width: 48%;
+    height: auto;
+    margin-bottom: 50px;
+    padding-right: 20px;
+    
+}
+
+.solution .box img{
+    width: 269px;
+    height: 450px;
+    float: left;
+    margin-right: 10px;
+}
+
+.solution .box .explain{
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.text_link{
+    font-size: 20px;
+    color: #ff693b;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .solution .box {
+    margin: auto;
+  }
+  .solution .box .explain{
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  
+}
+
+
+
+/* a button with 450px width and 120px height  */
+.button{
+    width: 250px;
+    height:auto;
+    padding: 20px;;
+    background-color: #ff693b;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family:"Laila-Bold";
+    color: white;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+/* button slide to from bottom to the top  when hovering */
+.button:hover{
+    background-color: #ff912b;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    transform: translateY(-10px);
+    
+}
