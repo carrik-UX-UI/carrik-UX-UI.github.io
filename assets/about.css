@@ -71,15 +71,6 @@ h1 {
 
 
 @media only screen and (max-width: 768px) {
-  .solution .box {
-    margin: auto;
-  }
-  .solution .box .explain{
-    font-size: 20px;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
 
     ::-webkit-scrollbar {
         display: none;
@@ -89,22 +80,27 @@ h1 {
 
 
 
-/* a button with 450px width and 120px height  */
-.button{
-    width: 250px;
-    height:auto;
-    padding: 20px;;
-    background-color: #ff693b;
-    border-radius: 10px;
-    font-size: 30px;
-    font-family:"Laila-Bold";
-    color: white;
-    text-align: center;
-    margin: auto;
-    text-decoration: none;
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
+.contact_button{
+  width: 250px;
+  height:auto;
+  padding: 20px;;
+  background-color: #ff693b;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family:"Laila-Bold";
+  color: white;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
+
+
+/* scale the button when hoveing */
+.contact_button:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
+}
