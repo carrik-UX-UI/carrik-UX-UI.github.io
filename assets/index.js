@@ -76,6 +76,5 @@ window.onscroll = function(){
 window.addEventListener('resize', function () { 
   "use strict";
   window.location.reload(); 
-  console.log("resize");  // test print  if resize function is triggered
 });
 
