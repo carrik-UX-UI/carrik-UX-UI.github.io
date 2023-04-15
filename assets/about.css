@@ -47,21 +47,20 @@ body {
   }
 
 
-h1 {
+  h1 {
     padding-top: 5%;
     display: flex;
     font-size: 48px;
-    /* font-weight: bold; */
     justify-content: center;
-    margin:20px;
+  
 
 }
 
 .description{
     padding-top: 10px;
     width: 90%;
-    font-size: 200%;
-    text-align: center;
+    font-size: 150%;
+    text-align: left;
     line-height:200%;
     margin: auto;
 }
@@ -76,6 +75,16 @@ h1 {
         display: none;
     }
   
+    h1 {
+      padding-top: 35%;
+      font-size: 36px;
+
+    }
+    .description{
+        font-size: 100%;
+        line-height: 200%;
+        text-align: left;
+    }
 }
 
 
