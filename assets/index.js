@@ -67,8 +67,14 @@ window.onscroll = function(){
   if (scrollTop >= distFromTop && scrollTop <= scrollDistance && windowWidth > 768) {
     
     document.querySelector(".element-wrapper").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
+    
   }
-
+  
 }
 
+
+window.addEventListener('resize', function () { 
+  "use strict";
+  window.location.reload(); 
+});
 
