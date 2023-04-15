@@ -91,132 +91,19 @@ body {
 
 
 
-/*  Navigation bar  */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    z-index: 2;
-  }
-  
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    padding-right: 40px;
-  }
-  
-
-  .navbar-links ul {
-    display: flex;
-    list-style-type: none;
-    z-index: 2;
-    
-  }
-
-  .navbar-links ul li {
-    
-  }
-
-
-  .navbar-links ul li a {
-    
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Laila-Bold';
-    margin-left: 30px;
-  }
 
 
 
-  .navbar-links a {
-    position: relative; /* make the <a> element a positioned container */
-    text-decoration: none; /* remove the default underline */
-    color: black; /* set the text color */
-  }
-  
-  .navbar-links a::before {
-    content: ''; /* add an empty pseudo-element */
-    position: absolute; /* position the element absolutely within the <a> container */
-    bottom: 0; /* position the element at the bottom of the container */
-    left: 0; /* start the element off the left edge of the container */
-    width: 0; /* start the element with no width */
-    height: 2px; /* set the height of the underline */
-    background-color: orange; /* set the color of the underline */
-    transition: width 0.2s ease-in-out; /* add a transition to animate the width change */
-    z-index: -1; /* set the z-index to behind the text */
-  }
-  
-  .navbar-links a:hover::before {
-    width: 100%; /* animate the width to cover the entire container */
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-  .logo {
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    margin-left: 20px;
-  
-  }
-  
-  .logo img { 
-    align-items: center;
-    height: 10%;
-    z-index: 2;
-  }
-
-
-
-
-
-
-.content {
-  display: flex;
-  flex-direction: column;  /* stack the content under this class vertically */
-  z-index:2;
-  font-family:"Laila-Regular";
-  /* margin-bottom: 50%; */
-  
-}
-
-
-.content h1 {
-  display: block;
-  /* width: auto; */
-  padding-top: 5%;
-  color: black;
-  font-size: 3.5rem; /* Change the font size to 2rem */
-  font-weight:570; /* Add bold font weight */
-
-  /* padding-left: 40px; */
-  text-align: left; /* Align the text to center */
-
-  
-}
 
 /* ----------------------------------------------------- */
 
 .horizontal-section {
   padding: 10px 0;
   height: auto;
+
 }
 
+/* important for horizontal scroll in the large screen */
 .sticky-wrapper {
   position: sticky;
   top: 15%;
@@ -232,18 +119,32 @@ body {
 
 .content {
   display: flex;
+  flex-direction: column;  /* stack the content under this class vertically */
   width: 600px;
   height: 485px;
-  /* background-color: rgb(255, 202, 152); */
   margin: 30px 80px 0 50px;
   flex-shrink: 0;
-  
-  display: flex;
-
   z-index:2;
   font-family:"Laila-Regular";
 
+
+  /* margin-bottom: 50%; */
   
+
+  
+}
+
+.content h1 {
+  display: block;
+  /* width: auto; */
+  padding-top: 5%;
+  color: black;
+  font-size: 3.5rem; /* Change the font size to 2rem */
+  font-weight:570; /* Add bold font weight */
+
+  /* padding-left: 40px; */
+  text-align: left; /* Align the text to center */
+
 }
 
 
@@ -437,7 +338,16 @@ body {
 
 @media only screen and (max-width: 768px) {
 
+  .horizontal-section{
+    width: 100%;
+  }
+  .sticky-wrapper{
+    display: flex;
+    padding-top: 30%;
+  }
+
   .element-wrapper {
+    width: 100%;	
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -445,36 +355,63 @@ body {
 
   /* scale the first project to smaller */
   .first_project {
-    width: 50%;
-    height: auto;
-    /* margin: 30px 0px 0 50px; */
+    width: 300px;
+    height: 291px;
+    margin: auto;
+    margin-top: 50%;
+    margin-bottom: 20%;
   }
   .first_project img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 291px;  
+  }
+  .last_project {
+    width: 300px;
+    height: 291px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .last_project img {
+    width: 300px;
+    height: 291px;
   }
 
+
+  .my-content{
+    font-size: 20px;
+  }
   /* shrink the size of all content */
   .content{
-
+    margin: auto;
     width: 100%;
     height: 300px;
     
   }
   .content h1 {
     font-size: 3rem;
+    margin: auto;
   }
+
 
   .typing-animation {
-
     font-size: 3.5rem;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .element-wrapper .my-element {
+
+
+  /* .element-wrapper .my-element {
+    align-items: center;
     width: 90%;
-    height: 90%;
+    
+    height: 100%;
     margin: 0;
     border-radius: 0;
     border: 0;
-  }
+  }  */
   
 }
