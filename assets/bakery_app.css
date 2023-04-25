@@ -98,45 +98,46 @@ h1 {
 
 .brief{
     padding-top: 50px;
+    padding-bottom: 50px;
     width: 90%;
     font-size: 28px;
     text-align: center;
     margin: auto;
+    
 }
 
 h2 {
     font-family:"Laila-Bold";
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
-    padding-left: 5%;
+    padding-left: 8%;
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
 h3 {
     font-family:"Laila-Medium";
-    font-weight: 580;
-    font-size: 30px;
-    padding-left: 5%;
-    margin-top: 30px;
+    font-weight: 595;
+    font-size: 25px;
+    padding-left: 8%;
+    margin-top: 35px;
     margin-bottom: 10px;
 }
 
 .description {
-    font-size: 30px;
-    width: 80%;
+    font-size: 25px;
+    width: 74%;
     margin: auto;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
 .responsive-image {
-    width: 90%;
+    width: 86%;
     height: auto;
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
 }
-
 
 .solution{
     display: flex;
@@ -166,7 +167,7 @@ h3 {
 }
 
 .solution .box .explain{
-    font-size: 30px;
+    font-size: 25px;
     width: 100%;
     height: auto;
     margin-top: 0;
