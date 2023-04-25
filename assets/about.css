@@ -58,13 +58,27 @@ body {
 
 .description{
     padding-top: 10px;
-    width: 90%;
-    font-size: 150%;
-    text-align: left;
+    padding-bottom: 30px;
+    width: 60%;
+    font-size: 24px;
+    font-family: "Laila-Medium";
+    text-align: center;
     line-height:200%;
     margin: auto;
+    
 }
 
+.description_1{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 55%;
+    font-size: 20px;
+    font-family: "Laila-Regular";
+    text-align: center;
+    line-height:200%;
+    margin: auto;
+    
+}
 
 
 
@@ -81,13 +95,53 @@ body {
 
     }
     .description{
-        font-size: 100%;
+        font-size: 20px;
         line-height: 200%;
-        text-align: left;
+        width: 80%;
+        text-align: center;
+    }
+
+
+    .description_1{
+        font-size: 18px;
+        line-height: 200%;
+        width: 80%;
+        text-align: center;
+
     }
 }
 
+.resume_button {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  background-color: #FFE6A6;
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: "Laila-Medium";
+  color: rgb(59, 59, 59);
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  display: block;
 
+
+  background: linear-gradient(to bottom, #ff9900 50%, #FFE6A6 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  transition: all .5s ease-out;
+}
+
+.resume_button:hover {
+  background-position: top;
+  color:white;
+
+}
+
+a{
+  color:#2B99FF;
+  text-decoration: none;
+}
 
 .contact_button{
   width: 250px;
@@ -113,3 +167,5 @@ body {
   transition: 0.5s;
   transform: scale(0.95);
 }
+
+

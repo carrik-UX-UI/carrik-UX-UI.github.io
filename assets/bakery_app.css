@@ -125,7 +125,7 @@ h3 {
     font-size: 25px;
     padding-left: 8%;
     margin-top: 35px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .description {
@@ -188,22 +188,6 @@ h3 {
 }
 
 
-@media only screen and (max-width: 768px) {
-  .solution .box {
-    margin: auto;
-  }
-  .solution .box .explain{
-    font-size: 20px;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-  
-}
 
 
 
@@ -235,3 +219,25 @@ h3 {
     transform: translateY(-10px);
     
 }
+
+
+@media only screen and (max-width: 768px) {
+    .solution .box {
+      margin: auto;
+    }
+    .solution .box .explain{
+      font-size: 20px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+  }
+  
+      ::-webkit-scrollbar {
+          display: none;
+      }
+  
+      .to-top {
+          padding: 5%;
+      }
+      
+  }
