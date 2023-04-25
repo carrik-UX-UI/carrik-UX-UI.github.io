@@ -2,7 +2,12 @@
 const navbar = document.querySelector('.navbar');
 let prevScrollPos = window.pageYOffset;
 // Set the distance to show the navbar
-const showDistance = 200;
+const showDistance = window.innerHeight;
+
+// back to top button
+const button = document.getElementById("back-to-top");
+button.classList.add("hidden");
+
 
 window.addEventListener('scroll', () => {
   const currentScrollPos = window.pageYOffset;
@@ -11,9 +16,11 @@ window.addEventListener('scroll', () => {
   if (prevScrollPos > currentScrollPos) {
     // If scrolling up, remove the hidden class from the navbar
     navbar.classList.remove('hidden');
+
   } else {
     // If scrolling down, add the hidden class to the navbar
     navbar.classList.add('hidden');
+    
   }
   
   prevScrollPos = currentScrollPos;
@@ -22,15 +29,20 @@ window.addEventListener('scroll', () => {
   if (currentScrollPos < showDistance && currentScrollPos !== 0) {
     navbar.classList.remove('hidden');
   }
+  
+
+
+  // Show back-to-top button when scrolling down past showDistance
+  if (currentScrollPos > showDistance) {
+    button.classList.remove("hidden");
+  } else {
+    button.classList.add("hidden");
+  }
 });
 
-// back to top button
-
-var button = document.getElementById("back-to-top");
-
 button.addEventListener("click", function() {
-window.scrollTo({
+  window.scrollTo({
     top: 0,
-    behavior: "smooth"
-    }); 
+    behavior: "smooth" 
+  }); 
 });

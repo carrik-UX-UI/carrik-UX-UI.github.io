@@ -53,6 +53,10 @@ body {
     padding: 2%;
 }
 
+/*  for js code to hide at begining  */
+.to-top.hidden {
+    display: none;
+  }
 
 .hero {
     background: linear-gradient(180deg, #ff912b 0%, #ff912b 20%, #ff693b 100%);

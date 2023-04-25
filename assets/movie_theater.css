@@ -44,7 +44,12 @@ body {
     padding: 2%;
 }
 
+/*  for js code to hide at begining  */
+.to-top.hidden {
+    display: none;
+  }
 
+  
 .hero {
     background: linear-gradient(94.65deg, #8D61B7 12.81%, #815AA7 28.84%, #573A73 93.79%);
     position: relative;
