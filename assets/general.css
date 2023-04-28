@@ -34,6 +34,10 @@ a {
       z-index: 2;
     }
     
+    .navbar.hidden {
+      display: none;
+    }
+    
     .navbar-links {
       display: flex;
       align-items: center;
