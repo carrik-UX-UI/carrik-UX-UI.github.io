@@ -1,5 +1,11 @@
 @import "/assets/font.css";
 
+:root {
+  --main-color: #FF9E58;
+
+}
+
+
 * {
   box-sizing: content-box;
     }
@@ -155,26 +161,49 @@ body {
 .first_project {
   width: 500px;
   height: 485px;
-  background-color: rgb(255, 202, 152);
   margin: 30px 100px 0 20px;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 5px solid #ff9900;
   position: relative;
+  background-color: rgb(255, 202, 152);
+  border: 5px solid #ff9900;
 }
 
 
 .last_project {
   width: 500px;
   height: 485px;
-  background-color: #c0a7d8;
   margin: 30px 100px 0 20px;
   flex-shrink: 0;
   border-radius: 20px;
+  position: relative;
+  background-color: #c0a7d8;
   border: 5px solid #7e53a6;
+}
+
+.project {
+  width: 500px;
+  height: 485px;
+  margin: 30px 100px 0 20px;
+  flex-shrink: 0;
+  border-radius: 20px;
   position: relative;
 }
 
+.project1{
+  background-color: rgb(255, 202, 152);
+  border: 5px solid #ff9900;
+}
+
+.project2{
+  background-color: #c0a7d8;
+  border: 5px solid #7e53a6;
+}
+
+.project3{
+  background-color: #F4FFD4;
+  border: 5px solid #3FBE81;
+}
 .my-element {
   align-items: center;
 }
@@ -354,27 +383,28 @@ body {
   }
 
   /* scale the first project to smaller */
-  .first_project {
+
+  .project {
+    width: 300px;
+    height: 291px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .project img {
+    width: 300px;
+    height: 291px;  
+  }
+
+  .project1 {
     width: 300px;
     height: 291px;
     margin: auto;
     margin-top: 50%;
     margin-bottom: 20%;
   }
-  .first_project img {
-    width: 300px;
-    height: 291px;  
-  }
-  .last_project {
-    width: 300px;
-    height: 291px;
-    margin: auto;
-    margin-bottom: 50px;
-  }
-  .last_project img {
-    width: 300px;
-    height: 291px;
-  }
+
+
+
 
 
   .my-content{

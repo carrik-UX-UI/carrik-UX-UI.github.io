@@ -145,3 +145,17 @@ el.addEventListener('mousedown', function() {
 el.addEventListener('mouseup', function() {
   el.style.transform = 'perspective(500px)  rotateX(0) rotateY(0)'
 })
+
+
+// change the color of cursor 
+window.onload = function() {
+  var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim().replace('#', '%23');
+
+
+  document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="${mainColor}" /></svg>') 8 8, auto`;
+
+  var links = document.querySelectorAll('a');
+  links.forEach(function(link) {
+      link.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="${mainColor}" /><circle cx="8" cy="8" r="6" fill="rgba(255, 165, 0, 0.1)" /></svg>') 8 8, auto`;
+  });
+}

@@ -1,5 +1,4 @@
 
-
 body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="orange" /></svg>') 8 8, auto;
   /* padding: 0; */
@@ -83,7 +82,7 @@ a {
       left: 0; /* start the element off the left edge of the container */
       width: 0; /* start the element with no width */
       height: 2px; /* set the height of the underline */
-      background-color: orange; /* set the color of the underline */
+      background-color: var(--main-color); /* set the color of the underline */
       transition: width 0.2s ease-in-out; /* add a transition to animate the width change */
       z-index: -1; /* set the z-index to behind the text */
     }

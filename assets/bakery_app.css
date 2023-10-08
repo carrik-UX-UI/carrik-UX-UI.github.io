@@ -1,4 +1,10 @@
 @import "/assets/font.css";
+
+:root {
+    --main-color: #ff9900;
+  }
+
+
 body {
     font-family:"Laila-Regular";
     margin: 0;
