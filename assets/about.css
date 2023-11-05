@@ -54,9 +54,9 @@ body {
 
 
   h1 {
-    padding-top: 5%;
+    padding-top: 6%;
     display: flex;
-    font-size: 48px;
+    font-size: 40px;
     justify-content: center;
   
 
@@ -162,7 +162,7 @@ a{
   margin: auto;
   text-decoration: none;
   display: block;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
 }
 

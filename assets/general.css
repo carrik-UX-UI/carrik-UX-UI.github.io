@@ -1,9 +1,11 @@
-
+*{
+  padding: 0;
+  margin: 0;
+  background-attachment: local, scroll;
+}
 body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="orange" /></svg>') 8 8, auto;
-  /* padding: 0; */
-  /* margin: 0; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
  
 }
 

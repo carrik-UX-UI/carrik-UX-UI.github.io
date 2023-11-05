@@ -8,7 +8,9 @@
 
 * {
   box-sizing: content-box;
+  
     }
+
 body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="orange" /></svg>') 8 8, auto;
   padding: 0;
@@ -204,6 +206,12 @@ body {
   background-color: #F4FFD4;
   border: 5px solid #3FBE81;
 }
+
+.project4{ 
+  background-color:rgba(255, 254, 209, 0.2), rgba(255, 254, 209, 1);
+  border: 5px solid #93E0FF;
+}
+
 .my-element {
   align-items: center;
 }
