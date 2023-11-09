@@ -403,13 +403,19 @@ body {
     height: 291px;  
   }
 
+
+  .content{
+  padding-bottom: 50%;
+  }
+  
+/* 
   .project1 {
     width: 300px;
     height: 291px;
     margin: auto;
     margin-top: 50%;
     margin-bottom: 20%;
-  }
+  } */
 
 
 
