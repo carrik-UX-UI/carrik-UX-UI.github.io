@@ -21,6 +21,16 @@ a {
   }
   
 
+
+h4{
+  font-family: 'Laila-Light';
+  font-size: 25px;
+  font-weight: 595;
+  padding-left:8%;
+  margin-right: 10px;
+  margin-bottom: 50px;
+
+}
   
   /*  Navigation bar  */
   .navbar {
@@ -158,5 +168,9 @@ a {
 
       h3, .description,.section .box .explain, .text_link{
       font-size: 16px;
+    }
+
+    h4{
+      font-size:14px
     }
     }
