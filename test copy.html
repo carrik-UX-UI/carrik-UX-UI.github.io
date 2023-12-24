@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cursor</title>
+  <style>
+  * {cursor: none;}
+    body {
+      /* pointer-events: none; */
+  background-color: rgb(237, 237, 237);
+  height: 100vh;    
+  margin: 0px;    
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: clamp(10px, 4vw, 100px);
+}
+
+body:hover > #cursor , body:hover > #cursor2   {
+    opacity: 1;
+  } 
+
+
+ 
+  #cursor {
+  height: 50px;
+  width: 50px;
+  border: 1px solid rgb(36, 112, 178);
+  border-radius: 50px;
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+  
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  
+  display: grid;
+  place-items: center;
+  
+  }
+  
+  #cursor2 {
+  height: 20px;
+  width: 20px;
+  border: 1px solid rgb(20, 20, 20);
+  border-radius: 50%;
+  color: aliceblue;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+  
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  
+  display: grid;
+  place-items: center;
+
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  /* --icon-url: none; */
+  /* background-image: url("assets/ìmages/Logo.svg"); */
+
+  }
+
+#cursor3{
+  left: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  /* background-color: aquamarine; */
+  background-image: url("assets/ìmages/Logo.svg");
+}
+    a {
+      margin: auto;
+    }
+
+
+  .CursorIcon{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-image: url("assets/ìmages/Logo.svg"); */
+  }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="cursor">
+  </div>
+  <div id="cursor2"> 
+    <div class ="CursorIcon" style="position: absolute;"> </div>
+  </div>
+  <div id="cursor3"></div>
+  <div class="abc interactable" data-type="link">
+    <a href="#">Link</a>
+  </div>
+  <div class="my-element interactable" data-type="link">
+    <a href="#">Link2</a>
+  </div>
+  <div class="my-element interactable" ><a class="my-element interactable" href="#">Link2</a>
+   diu</div>
+   <div class="my-element" data-type="project"> <a href="#">Link4</a>
+    hello </div>
+  <div class="my-element" data-type="project">  
+    <a href="#" data-type="project" > test cursor hellow  </a> </div>
+    <div>qqqwwwerty</div>
+
+</body>
+<script>
+  const cursor = document.getElementById("cursor");
+  const cursor2 = document.getElementById("cursor2");
+  
+  
+  const animateCursor = (e, interacting) => {
+    const x = e.clientX - cursor.offsetWidth / 2,
+          y = e.clientY - cursor.offsetHeight / 2;
+
+    const x2 = e.clientX - cursor2.offsetWidth / 2,
+          y2 = e.clientY - cursor2.offsetHeight / 2;
+    
+    const keyframes = {
+      transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+    }
+
+
+
+
+    // const keyframes2 = {
+    // transform: `translate(${x2}px, ${y2}px) scale(${interacting ? 8 : 1})`,
+    // backgroundImage: e.target.closest('.my-element') ? "url('assets/ìmages/Logo.svg')" : "none",
+    // borderColor: e.target.closest('.my-element') ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 1)"
+
+    // };
+
+    const keyframes2 = {
+      transform: `translate(${x2}px, ${y2}px)${e.target.closest('.my-element') ? ' scale(8)' : ` scale(${interacting ? 0 : 1})`}`,
+  ...(
+    e.target.closest('.my-element')
+      ? {
+          backgroundImage: "url('assets/ìmages/Logo.svg')",
+          borderColor: "rgba(0, 0, 0, 0)"
+         
+        }
+      : {
+          backgroundImage: "none",
+          borderColor: "rgba(0, 0, 0, 1)"
+        }
+  )
+};
+// backgroundImage: e.target.classList.contains("my-element") ? "url('assets/ìmages/Logo.svg')" : "none"
+    // backgroundImage: e.target.closest('.my-element').getAttribute("data-type") === "project" ? "url('assets/ìmages/Logo.svg')" : "none"
+ 
+//     const keyframes2 = {
+//   transform: `translate(${x2}px, ${y2}px)${e.target.closest('.my-element') ? '' : `scale(${interacting ? 0 : 1})`}`,
+//   backgroundImage: e.target.closest('.my-element') ? "url('assets/ìmages/Logo.svg')" : "none"
+// };
+
+
+    cursor.animate(keyframes, { 
+      duration: 800, 
+      fill: "forwards" 
+    });
+
+
+
+    cursor2.animate(keyframes2, { 
+      duration:100, 
+      fill: "forwards" 
+    });
+
+    if (dataType === "project") {
+    
+    cursorIcon.style.backgroundImage = "none";
+    cursorIcon.textContent = "View";
+  } else {
+    cursorIcon.style.backgroundImage = "url('path/to/logo.png')";
+    
+  }
+
+
+  }
+
+  // /   -----------------------------
+  
+  const ChangeCursorIcon = type => {
+  switch(type) {
+    case "project":
+      return "view"; 
+    default:
+      return "fa-solid fa-arrow--right"; 
+  }
+}
+  
+  window.onmousemove = e => {
+
+    // const interactable = e.target.closest(".interactable"),
+    //       interacting = interactable !== null;
+    
+    const interacting = e.target.tagName === "A";
+
+   
+    
+    animateCursor(e, interacting);
+    
+    // ?????/
+    // cursor.dataset.type = interacting ? interactable.dataset.type : "";
+    
+    // if(interacting) {
+    //   icon.className = getTrailerClass(interactable.dataset.type);
+    // }
+  }
+  
+  
+  
+  
+  
+  
+  
+    </script>
+</html>

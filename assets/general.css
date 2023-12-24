@@ -2,24 +2,81 @@
   padding: 0;
   margin: 0;
   background-attachment: local, scroll;
-}
-body {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="orange" /></svg>') 8 8, auto;
-  /* background-attachment: fixed; */
- 
+  color: rgb(29, 29, 29);
+  cursor: none;
+  /* pointer-events: none; */
 }
 
- 
-/* cursor effect point to the link*/ 
-/* a {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="orange" /></svg>') 8 8, auto;
-  }
- */
-a {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="orange" /><circle cx="8" cy="8" r="6" fill="rgba(255, 165, 0, 0.1)" /></svg>') 8 8, auto;
 
-  }
+/* cursor  */
+body:hover > #cursor , body:hover > #cursor2   {
+  opacity: 1;
+} 
+
+  /* Outside */
+  #cursor {
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgb(29, 29, 29,0.5);
+    border-radius: 100%;
+    /* background-color: rgb(252, 252, 252); */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    display: grid;
+    place-items: center;
+    }
+   
+  /* cursor 2=  text/icon */
+    #cursor2 {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    color: rgb(29, 29, 29);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    display: grid;
+    place-items: center;
+    background-size: contain;
+    }
   
+  
+    #cursor_dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: rgb(29, 29, 29);
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 1;
+    
+    display: grid;
+    place-items: center;
+    
+    }
+    #cursor_text { 
+    
+    font-size: 30px;
+    position: fixed;
+    opacity: 0; 
+    
+    }
+
+
+
+
+ 
 
 
 h4{
@@ -119,7 +176,7 @@ h4{
       z-index: 2;
     }
 
-
+  
   
     @media only screen and (max-width: 768px) {
       .logo {
@@ -174,3 +231,5 @@ h4{
       font-size:14px
     }
     }
+
+  

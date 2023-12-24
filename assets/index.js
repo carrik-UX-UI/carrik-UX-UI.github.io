@@ -1,3 +1,58 @@
+const cursor = document.getElementById("cursor");
+const cursor2 = document.getElementById("cursor2");
+
+
+const animateCursor = (e, interacting) => {
+  const x = e.clientX - cursor.offsetWidth / 2,
+        y = e.clientY - cursor.offsetHeight / 2;
+
+  const x2 = e.clientX - cursor2.offsetWidth / 2,
+        y2 = e.clientY - cursor2.offsetHeight / 2;
+  
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 4 : 1})`
+  }
+  cursor.style.borderWidth = interacting ? "0.5px" : "1px"; 
+  cursor.style.backgroundColor = interacting && e.target.closest('.project') 
+  ? "rgba(255, 255, 255, 0.8)" : "rgba(255, 255, 255, 0)";
+
+  const cursor_dot = document.getElementById("cursor_dot");
+  const cursor_text = document.getElementById("cursor_text");
+  cursor_dot.style.opacity = interacting ? "0" : "1";
+  cursor_text.style.opacity = interacting && e.target.closest('.project') ? "1" : "0";
+
+  const keyframes2 = 
+  { transform: `translate(${x2}px, ${y2}px)` };
+
+  cursor.animate(keyframes, { 
+    duration: 800, 
+    fill: "forwards" 
+  });
+
+
+
+  cursor2.animate(keyframes2, { 
+    duration:100, 
+    fill: "forwards" 
+  });
+
+ 
+
+
+
+}
+
+// /   -----------------------------
+
+
+
+window.onmousemove = e => {
+  const interacting = e.target.closest('a') !== null;
+  animateCursor(e, interacting);
+}
+
+
+
 
 // <!-- typing animation java -->
 
@@ -45,38 +100,12 @@ typeWord(words[wordIndex]);
 
 
 
-//  scrolling projects
-
-var windowWidth = window.innerWidth;
-
-var horLength = document.querySelector(".element-wrapper").scrollWidth;
-
-
-var distFromTop = document.querySelector(".horizontal-section").offsetTop;
-
-
-var scrollDistance = distFromTop + horLength - windowWidth;
-
-document.querySelector(".horizontal-section").style.height = horLength + "px";
-
-
-
-window.onscroll = function(){
-  var scrollTop = window.pageYOffset;
- 
-  if (scrollTop >= distFromTop && scrollTop <= scrollDistance && windowWidth > 768) {
-    
-    document.querySelector(".element-wrapper").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
-    
-  }
-  
-}
-
+// resize page to reload
 
 window.addEventListener('resize', function () { 
   "use strict";
   window.location.reload(); 
-  console.log("resize");  // test print  if resize function is triggered
+  // console.log("resize");  // test print  if resize function is triggered
 });
 
 
@@ -147,15 +176,15 @@ el.addEventListener('mouseup', function() {
 })
 
 
-// change the color of cursor 
-window.onload = function() {
-  var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim().replace('#', '%23');
+// // change the color of cursor 
+// window.onload = function() {
+//   var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim().replace('#', '%23');
 
 
-  document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="${mainColor}" /></svg>') 8 8, auto`;
+//   document.body.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="${mainColor}" /></svg>') 8 8, auto`;
 
-  var links = document.querySelectorAll('a');
-  links.forEach(function(link) {
-      link.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="${mainColor}" /><circle cx="8" cy="8" r="6" fill="rgba(255, 165, 0, 0.1)" /></svg>') 8 8, auto`;
-  });
-}
+//   var links = document.querySelectorAll('a');
+//   links.forEach(function(link) {
+//       link.style.cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="${mainColor}" /><circle cx="8" cy="8" r="6" fill="rgba(255, 165, 0, 0.1)" /></svg>') 8 8, auto`;
+//   });
+// }
