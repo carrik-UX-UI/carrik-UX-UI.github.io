@@ -4,8 +4,8 @@
     --main-color: #06C6FE;
     --hover-color: #0487AD;
     /* gradient color */
-
-    --background: linear-gradient( to bottom, #7AD9FF,#D7F4E2);
+    --side-color: #7AD9FF;
+    --background: #FCFCFC;
   
   }
 
@@ -60,7 +60,7 @@ body,::-webkit-scrollbar-track{
 .hero {
 
     position: relative;
-    width: 90%;
+    width: 85%;
     /* height: 435px; */
     margin:auto;
     margin-top: 100px; /* Add margin-top to move hero image below navigation bar */
@@ -122,14 +122,14 @@ h2 {
 h3 {
     font-family:"Laila-Medium";
     font-weight: 595;
-    font-size: 25px;
+    font-size: 22px;
     padding-left: 8%;
     margin-top: 35px;
     margin-bottom: 20px;
 }
 
 .description {
-    font-size: 25px;
+    font-size: 22px;
     width: 85%;
     /* margin: auto; */
     margin-bottom: 50px;
@@ -140,7 +140,7 @@ h3 {
 
 
 .project_link{
-    font-size: 25px;
+    font-size: 22px;
     text-decoration: underline;
     color: #521AF1;
     margin: auto;
@@ -155,10 +155,11 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    width: 85%;
+    width: 80%;
     height: auto;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     
 }
 
@@ -177,12 +178,12 @@ h3 {
 
 /* img under class  */
 .section .two_img img{
-    width: 500px;
+    width: 45%;
     margin-right: 30px;
 }
 
 .section .box .explain{
-    font-size: 25px;
+    font-size: 22px;
     width: 100%;
     height: auto;
     margin-top: 0;
@@ -196,6 +197,7 @@ h3 {
     display: flex;
     justify-content: flex-end;
     padding-right: 2%;
+    padding-top: 20px;
 }
 
 
@@ -207,7 +209,7 @@ h3 {
     height:auto;
     padding: 20px;;
     background-color: var(--main-color);
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 30px;
     font-family:"Laila-Bold";
     color: white;

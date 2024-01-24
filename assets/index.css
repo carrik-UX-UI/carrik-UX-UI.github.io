@@ -1,7 +1,7 @@
 @import "/assets/font.css";
 
 :root {
-  --main-color: #FF9E58;
+  --main-color: #010152;
 
 }
 
@@ -21,7 +21,7 @@ body {
   
   padding: 0;
   margin: 0;
-  font-family:"Laila-Regular";
+  font-family:"Hind-Regular";
   display: flex;
   height: 100vh;
   width: 100%;
@@ -64,7 +64,7 @@ body {
   margin: 30px 80px 0 50px;
   flex-shrink: 0;
   z-index:2;
-  font-family:"Laila-Regular";
+  font-family:"Hind-Regular";
 
 
   /* margin-bottom: 50%; */
@@ -105,14 +105,64 @@ body {
   width: 80%;
   height: 100px;
   flex-shrink: 0;
-  border: 2px dashed;
-  border-style: none  none dashed none;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #000 10%, transparent 90%) 1;
+
+
+  /* background: linear-gradient(to bottom, #a5a5d3 50%, #FCFCFC 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  transition: all .5s ease-out; */
   
+
 }
+
+.project:hover{
+  scale: 1.05;
+  transition: all .5s ease-out; 
+}
+
+/* ---- slide effect : create backgroun when hover */
+.slide {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cdc3ff;
+  transition: top 0.3s ease;
+  transform: translateY(0%);
+  z-index: -1;
+}
+
+.slide:hover::before {
+  top: 0;
+
+}
+
+
+
+
+/* ------------------- */
+
 #last_raw{
   border-style: none;
   margin-bottom: -2%;
+}
+
+#last_raw:hover{
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, #000 10%, transparent 90%) 1;
 }
 .project_raw{
   display: block;

@@ -1,3 +1,5 @@
+// cursor effect
+
 const cursor = document.getElementById("cursor");
 const cursor2 = document.getElementById("cursor2");
 
@@ -35,10 +37,6 @@ const animateCursor = (e, interacting) => {
     duration:100, 
     fill: "forwards" 
   });
-
- 
-
-
 
 }
 

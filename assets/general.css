@@ -1,3 +1,8 @@
+:root {
+  --background-color: #FCFCFC;
+  
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -5,6 +10,13 @@
   color: rgb(29, 29, 29);
   cursor: none;
   /* pointer-events: none; */
+  
+}
+
+.division{
+  background: var(--side-color);
+  width: 100%;
+  padding: 20px 0 20px;
 }
 
 
@@ -80,7 +92,7 @@ body:hover > #cursor , body:hover > #cursor2   {
 
 
 h4{
-  font-family: 'Laila-Light';
+  font-family: 'Hind-Light';
   font-size: 25px;
   font-weight: 595;
   padding-left:8%;
@@ -129,7 +141,7 @@ h4{
       text-decoration: none;
       font-size: 20px;
       font-weight: bold;
-      font-family:'Laila-Bold';
+      font-family:'Hind-Bold';
       margin-left: 30px;
     }
   

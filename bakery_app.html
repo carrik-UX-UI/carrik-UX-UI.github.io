@@ -4,9 +4,11 @@
      <meta charset="utf-8">   
     <link rel="stylesheet" href="assets\bakery_app.css">
     <link rel="stylesheet" href="assets\general.css">
+    <link rel="stylesheet" href="assets\project.css">
 	<title>Bakery App</title>
   <link rel="icon" type="image/x-icon" href="assets\ìmages\favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 </head>
 
@@ -30,12 +32,25 @@
       
     </div>
   
-  
+
   </header>
 
 
     
-<body>
+<body >
+
+<!-- cursor effect -->
+  <div id="cursor"></div>
+  <div id="cursor2">
+    <div id="cursor_dot"></div>
+    <!-- by default opacity is zero -->
+    <div id="cursor_text">view</div>
+  </div>
+  <script src="assets\cursor.js">
+  </script>
+<!-- -------------- -->
+
+
   <div class="hero"> 
     <img src="assets\ìmages\bakery_app\hero.svg" alt="Hero Image">
     <img class = "title" src="assets\ìmages\bakery_app\hero_title.svg" alt="Hero Image" >
@@ -55,12 +70,16 @@
   <h3>Challenge:</h3>
   <div class="description">Massive nutrition information for the products in bakery and cumbersome calculation of nutrition intake.</div>
 
-  <h2>Research</h2>
-	<div class="description">I interviewed 4 participants with list of questions to understand the user’s need and expectations</div>
-  <h3>Pain points:</h3>
-  <img class="responsive-image" src="assets\ìmages\bakery_app\pain_points.png" alt="pain points">
-	<h3>Persona:</h3>
-  <img class="responsive-image" src="assets\ìmages\bakery_app\Persona.png" alt="Persona">
+
+  <div class="division">
+    <h2>Research</h2>
+    <div class="description">I interviewed 4 participants with list of questions to understand the user’s need and expectations</div>
+    <h3>Pain points:</h3>
+    <img class="responsive-image" src="assets\ìmages\bakery_app\pain_points.png" alt="pain points">
+    <h3>Persona:</h3>
+    <img class="responsive-image" src="assets\ìmages\bakery_app\Persona.png" alt="Persona">
+  </div>
+
 
   <h2>Process</h2>
   <h3>Brainstorm</h3>
@@ -76,56 +95,62 @@
 
 
 <!-- create a image and a text descrption align with the image in the left -->
+  <div class="division">
+  <h2>Solution</h2>
+    <div class="section">
 
-  <h2>section</h2>
-  <div class="section">
+      <div class="box">
+        <img src="assets\ìmages\bakery_app\product_highfi 1.png" alt="product_highfi">
+        <div class="explain">    
+          <p>The app provides nutrition labels allowing users to pick up the products they want easily. Users can apply these labels to filter for further selection.
+          </p>
+        </div>
+      </div>  
 
-    <div class="box">
-      <img src="assets\ìmages\bakery_app\product_highfi 1.png" alt="product_highfi">
-      <div class="explain">    
-        <p>The app provides nutrition labels allowing users to pick up the products they want easily. Users can apply these labels to filter for further selection.
-        </p>
-      </div>
-    </div>  
+      <div class="box">
+        <img src="assets\ìmages\bakery_app\nutrition_product_highfi 1.png" alt="nutrition_product_highfi">
+        <div class="explain">    
+          <p>The information separation of content and nutrition makes it less busy and more organized. And it enables the users to get the information with less effort.
+          </p>
+        </div>
+      </div>  
 
-    <div class="box">
-      <img src="assets\ìmages\bakery_app\nutrition_product_highfi 1.png" alt="nutrition_product_highfi">
-      <div class="explain">    
-        <p>The information separation of content and nutrition makes it less busy and more organized. And it enables the users to get the information with less effort.
-        </p>
-      </div>
-    </div>  
-
-    <div class="box">
-      <img src="assets\ìmages\bakery_app\cart_highfi 1.png" alt="cart_highfi">
-      <div class="explain">    
-        <p>The shopping cart only provides a checkout function but also nutrition calculation for chosen products.
-        </p>
-      </div>
-    </div>  
-   
-    <div class="box">
-      <img src="assets\ìmages\bakery_app\Nutrition_summary_highfi 1.png" alt="Nutrition_summary_highfi">
-      <div class="explain">    
-        <p>The pie chart and bar chart illustrates the summary nutrition information of chosen product intuitively.
-        </p>
-      </div>
-    </div>  
+      <div class="box">
+        <img src="assets\ìmages\bakery_app\cart_highfi 1.png" alt="cart_highfi">
+        <div class="explain">    
+          <p>The shopping cart only provides a checkout function but also nutrition calculation for chosen products.
+          </p>
+        </div>
+      </div>  
     
+      <div class="box">
+        <img src="assets\ìmages\bakery_app\Nutrition_summary_highfi 1.png" alt="Nutrition_summary_highfi">
+        <div class="explain">    
+          <p>The pie chart and bar chart illustrates the summary nutrition information of chosen product intuitively.
+          </p>
+        </div>
+      </div>  
+      
+    </div>
   </div>
- 
 
-  <a href="https://docs.google.com/presentation/d/1-gcRNPuvR4duDs2maCt_d5fUBlQ_VQx_bpFAO5Df-3w/edit?usp=sharing" target="_blank" class="text_link">View more detail about the project</a>
-
+  <div class="text_link">
+  <a href="https://docs.google.com/presentation/d/1-gcRNPuvR4duDs2maCt_d5fUBlQ_VQx_bpFAO5Df-3w/edit?usp=sharing" target="_blank" >View more detail about the project</a>
+  </div>
+  <div style="overflow: auto;"> 
 	<a href="/movie_theater.html" class="button">Next Project</a>
+  </div>
+
+  <a href="#" class="to-top" id="back-to-top">
+    <img src="assets\ìmages\to-the-top.svg" alt="Back to Top">
+  </a>
+
 </body>
 </html>
 
 
 
 
-<a href="#" class="to-top" id="back-to-top">
-  <img src="assets\ìmages\to-the-top.svg" alt="Back to Top">
-</a>
+
 
 <script src="assets\project.js"></script>
