@@ -26,6 +26,44 @@
   }
   
 
+  .section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    
+  }
+  
+  .section .box{
+    width: 48%;
+    height: auto;
+    margin-bottom: 50px;
+    padding-right: 20px;
+    
+  }
+  
+  .section .box img{
+    width: 45%;
+    
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .section .box .explain{
+    font-size: 22px;
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  
+
 @media only screen and (max-width: 768px) {
     .section .box {
       margin: auto;

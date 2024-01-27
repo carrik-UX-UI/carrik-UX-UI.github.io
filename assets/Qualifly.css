@@ -223,7 +223,7 @@ h3 {
 }
 
 .button:hover{
-    background-color: var(--main-color);
+    background-color: var(--hover-color);
     color: white;
     text-decoration: none;
     transition: 0.5s;

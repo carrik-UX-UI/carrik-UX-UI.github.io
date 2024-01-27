@@ -209,7 +209,7 @@ body {
   display: flex;
   display: inline-block;
 
-  border-right: 10px solid rgb(255, 177, 59);
+  border-right: 10px solid #010152;
   /* padding-right: 10px; */
   font-size: 5rem;
   font-weight: bold;
@@ -249,7 +249,7 @@ body {
 
   50% {
    
-    border-right-color: rgb(255, 177, 59); /* cursor appear  */
+    border-right-color: #010152; /* cursor appear  */
   }
 }
 
