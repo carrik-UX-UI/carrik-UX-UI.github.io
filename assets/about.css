@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family:"Laila-Regular";
+    font-family:"Hind-Regular";
     margin: 0;
     padding: 0;
     background: #FCFCFC;
@@ -43,7 +43,7 @@ body {
 
 
   h1 {
-    padding-top: 6%;
+    margin-top:20px ;
     display: flex;
     font-size: 40px;
     justify-content: center;
@@ -53,58 +53,16 @@ body {
 
 .description{
     padding-top: 10px;
-    padding-bottom: 30px;
-    width: 60%;
-    font-size: 24px;
-    font-family: "Laila-Medium";
+    padding-bottom: 10px;
+    width: 70%;
+    font-size: 18px;
+    font-family: "Hind-Medium";
     text-align: center;
     line-height:200%;
     margin: auto;
     
 }
 
-.description_1{
-    padding-top: 30px;
-    padding-bottom: 50px;
-    width: 55%;
-    font-size: 20px;
-    font-family: "Laila-Regular";
-    text-align: center;
-    line-height:200%;
-    margin: auto;
-    
-}
-
-
-
-
-@media only screen and (max-width: 768px) {
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-  
-    h1 {
-      padding-top: 35%;
-      font-size: 36px;
-
-    }
-    .description{
-        font-size: 20px;
-        line-height: 200%;
-        width: 80%;
-        text-align: center;
-    }
-
-
-    .description_1{
-        font-size: 18px;
-        line-height: 200%;
-        width: 80%;
-        text-align: center;
-
-    }
-}
 
 .resume_button {
   width: 150px;
@@ -113,7 +71,7 @@ body {
   background-color: #FFE6A6;
   border-radius: 10px;
   font-size: 25px;
-  font-family: "Laila-Medium";
+  font-family: "Hind-Medium";
   color: rgb(59, 59, 59);
   text-align: center;
   margin: auto;
@@ -145,7 +103,7 @@ a{
   background-color: #3B49C8;
   border-radius: 10px;
   font-size: 30px;
-  font-family:"Laila-Bold";
+  font-family:"Hind-Bold";
   color: white;
   text-align: center;
   margin: auto;
@@ -161,6 +119,31 @@ a{
 .contact_button:hover{
   transition: 0.5s;
   transform: scale(0.95);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+  
+    h1 {
+      margin-top: 50px;
+      font-size: 36px;
+
+    }
+    .description{
+        font-size: 12px;
+        line-height: 200%;
+        width: 85%;
+        text-align: center;
+    }
+
+
+  
 }
 
 

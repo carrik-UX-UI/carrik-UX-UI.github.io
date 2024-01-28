@@ -1,5 +1,5 @@
 body {
-  font-family:"Laila-Regular";
+  font-family:"Hind-Regular";
   margin: auto;
   padding: 0;
   background: var(background-color);
@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-  font-family:"Laila-Bold";
+  font-family:"Hind-Bold";
   font-size: 30px;
   font-weight: bold;
   padding-left: 8%;
@@ -96,7 +96,7 @@ h2 {
 }
 
 h3 {
-  font-family:"Laila-Medium";
+  font-family:"Hind-Medium";
   font-weight: 595;
   font-size: 22px;
   padding-left: 8%;
@@ -146,7 +146,7 @@ h3 {
   background-color: var(--main-color);
   border-radius: 10px;
   font-size: 30px;
-  font-family:"Laila-Bold";
+  font-family:"Hind-Bold";
   color: white;
   text-align: center;
   margin: auto;
