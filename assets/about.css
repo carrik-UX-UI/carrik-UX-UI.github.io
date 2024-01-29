@@ -11,8 +11,8 @@ body {
     padding: 0;
     background: #FCFCFC;
     background-attachment: fixed;
-
-  z-index: -1;
+    display: flex;
+    z-index: -1;
   
 }
 
@@ -22,14 +22,14 @@ body {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #ff9900 ;
+    background-color: #0f0f77 ;
     height:auto;
     border-radius: 100px;
   }
   
     /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-   background-color: #e28800 ;
+   background-color: #000035 ;
 }
  
   ::-webkit-scrollbar-track {
@@ -43,7 +43,8 @@ body {
 
 
   h1 {
-    margin-top:20px ;
+    margin-bottom:2.25rem ;
+    
     display: flex;
     font-size: 40px;
     justify-content: center;
@@ -51,41 +52,47 @@ body {
 
 }
 
+.about{
+  margin: 7.5rem 3.625rem 0 7.25rem;
+}
 .description{
+    margin: 7rem 3.625rem 0 7.25rem;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 70%;
-    font-size: 18px;
-    font-family: "Hind-Medium";
-    text-align: center;
-    line-height:200%;
-    margin: auto;
+    font-size: 1.1rem;
+    font-family: "Hind-Regular";
+    text-align: left;
+    line-height:normal;
+    
+    width: 41.3125rem;
     
 }
 
+.description  p{
+  margin-bottom: 2.87rem;
+}
 
-.resume_button {
+.button {
   width: 150px;
   height: auto;
   padding: 10px;
-  background-color: #FFE6A6;
+  margin-bottom: 3rem;
   border-radius: 10px;
   font-size: 25px;
   font-family: "Hind-Medium";
   color: rgb(59, 59, 59);
   text-align: center;
-  margin: auto;
   text-decoration: none;
   display: block;
-
-
-  background: linear-gradient(to bottom, #3B49C8 50%, #9292f5 50%);
+  border-radius: 0.3125rem;
+  border: 0.125rem solid #000;
+  background: linear-gradient(to bottom, #3B49C8 50%, #FCFCFC 50%);
   background-size: 100% 200%;
   background-position: bottom;
   transition: all .5s ease-out;
 }
 
-.resume_button:hover {
+.button:hover {
   background-position: top;
   color:white;
 
