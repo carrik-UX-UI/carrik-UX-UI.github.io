@@ -44,12 +44,32 @@ const animateCursor = (e, interacting) => {
 
 
 
-window.onmousemove = e => {
+// window.onmousemove = e => {
+//   const interacting = e.target.closest('a') !== null;
+//   animateCursor(e, interacting);
+// }
+
+function handleMouseMove(e) {
   const interacting = e.target.closest('a') !== null;
   animateCursor(e, interacting);
 }
 
+// Check for touch support initially
+const hasTouch = 'ontouchstart' in window;
 
+// Adapt approach based on detected touch support
+if (hasTouch) {
+  // Touch device: Add and remove event listener on touch events
+  window.addEventListener('touchstart', () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+  });
+  // window.addEventListener('touchend', () => {
+  //   window.addEventListener('mousemove', handleMouseMove);
+  // });
+} else {
+  // Non-touch device: Attach the event listener immediately
+  window.addEventListener('mousemove', handleMouseMove);
+}
 
 
 // <!-- typing animation java -->

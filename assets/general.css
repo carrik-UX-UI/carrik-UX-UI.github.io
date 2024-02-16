@@ -1,7 +1,9 @@
+/* cursor / narvigation bar / scroll bar */
 :root {
   --background-color: #FCFCFC;
   
 }
+
 
 *{
   padding: 0;
@@ -13,11 +15,6 @@
   
 }
 
-.division{
-  background: var(--side-color);
-  width: 100%;
-  padding: 20px 0 20px;
-}
 
 
 /* cursor  */
@@ -88,18 +85,6 @@ body:hover > #cursor , body:hover > #cursor2   {
 
 
 
- 
-
-
-h4{
-  font-family: 'Hind-Light';
-  font-size: 25px;
-  font-weight: 595;
-  padding-left:8%;
-  margin-right: 10px;
-  margin-bottom: 50px;
-
-}
   
   /*  Navigation bar  */
   .navbar {
@@ -190,7 +175,7 @@ h4{
 
   
   
-    @media only screen and (max-width: 768x) {
+@media only screen and (max-width: 768x) {
       .logo {
         margin-left: 10px;
       }
@@ -198,51 +183,7 @@ h4{
         height:30px;
       }
 
-      .hero{
-        width: 100%;
-        margin-top: 0px;
-        border-radius: 0px;
-    }
-      .date {
-        position: absolute;
-        bottom: 10px;
-        right: 2px;
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 5px;
-        font-size: 10px;
-        border-radius: 5px;
-    }
-
-      .navbar-links  a {
-        font-size: 16px;
-      }
-
-/* image */
-      .section .two_img img,.section .box{
-        width: 90%;
-        padding-bottom: 40px;
-      }
-      .section .box img{
-        width:90%;
-        padding-bottom: 20px;
-      }
-/* font size */
-      h1{
-        font-size: 20px;
-    }
-  
-      .brief,h2{
-    font-size: 18px;
-    }
-
-      h3, .description,.section .box .explain, .text_link{
-      font-size: 16px;
-    }
-
-    h4{
-      font-size:14px
-    }
-    }
+}
 
     
 

@@ -22,8 +22,6 @@ body {
   padding: 0;
   margin: 0;
   font-family:"Hind-Regular";
-  display: flex;
-  flex-wrap: wrap;
   height: 100vh;
   width: 100%;
   margin: 0px;
@@ -31,6 +29,9 @@ body {
   position: relative;
   background: #FCFCFC;
   background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
 }
   
@@ -58,31 +59,20 @@ body {
 
 
 .content {
-  position: fixed;
-  top: 25%;
-  width: 600px;
-  height: 485px;
-  margin: 30px 80px 0 50px;
-  flex-shrink: 0;
+
+  margin: auto; 
   z-index:2;
   font-family:"Hind-Regular";
-
-
-  /* margin-bottom: 50%; */
-  
+  width: 20rem;
 
   
 }
 
 .content h1 {
   display: block;
-  /* width: auto; */
-  padding-top: 5%;
   color: #828282;
   font-size: 3.5rem; /* Change the font size to 2rem */
   font-weight:570; /* Add bold font weight */
-
-  /* padding-left: 40px; */
   text-align: left; /* Align the text to center */
 
 }
@@ -95,27 +85,19 @@ body {
 /* ------------------------------------- */
 
 .collection{
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  width: 50%;
+  display: block;
+  width: 35rem;
+  margin:auto;
   border-style: none  none none solid;
 
 }
 .project {
-  width: 80%;
+  width: 100%;
   height: 100px;
   flex-shrink: 0;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(to right, #000 10%, transparent 90%) 1;
-
-
-  /* background: linear-gradient(to bottom, #a5a5d3 50%, #FCFCFC 50%);
-  background-size: 100% 200%;
-  background-position: bottom;
-  transition: all .5s ease-out; */
-  
 
 }
 
@@ -180,7 +162,7 @@ body {
 } */
 
 .project_name{
-  font-size:35px ;
+  font-size:2.2rem;
   padding-left: 10%;
   height: 100%;
   display: flex;
@@ -207,20 +189,9 @@ body {
 /* -------------------------------------------------- */
 /*  word typing   UX Designer / UI */
 .typing-animation {
-  display: flex;
-  display: inline-block;
-
   border-right: 10px solid #010152;
-  /* padding-right: 10px; */
   font-size: 5rem;
-  font-weight: bold;
-  animation: typing 0s steps(12), blink-caret 1s step-end infinite;
-
-
-  position: absolute;
-  left: 0;
-  margin-left: 45px;
-  margin-top: 0%;
+  position: absolute;  /* typing cursor move with typing word */
   white-space: nowrap;
 }
 
@@ -321,25 +292,23 @@ body {
   /* shrink the size of all content */
   .content{
     margin: auto;
-    width: 100%;
-    height: 300px;
+   
     
   }
   .content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: auto;
   }
 
 
   .typing-animation {
-    font-size: 3.5rem;
-    position: absolute;
-    left: 0;
+    font-size: 2.5rem;
     white-space: nowrap;
-    margin: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
   }
-
+  
+  .project_name{
+    font-size: 1.5rem;
+  }
   
 }

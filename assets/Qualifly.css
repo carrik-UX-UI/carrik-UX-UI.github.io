@@ -155,40 +155,59 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width:100%;
+    margin: 1.5rem auto;
+    
     
 }
 
 .section .box{
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+    margin: 1.5rem auto;
+    width: 80%;
     
 }
 
-.section .box img{
-    width: 600px;
-    float: left;
-    margin-right: 30px;
-}
+
+
+
 
 /* img under class  */
-.section .two_img img{
-    width: 45%;
-    margin-right: 30px;
-}
+.two_img{
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: 5%;
 
+}
+.two_img img{
+    width: 45%;
+    margin: auto;
+}
 .section .box .explain{
     font-size: 22px;
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 1rem auto;
+    min-width: 300px;
     text-align: left;
+    overflow: hidden; /* hide the text that is out of the box --> move down */
+}
+
+.section .box  p{
+    font-size: 22px;
+    margin:1.5rem auto;
+
+}
+
+.left_img{
+    max-width: 600px;
+    margin: auto;
+    margin-right: 1rem;
+    float: left;
+}
+.down_img{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+
 }
 
 .text_link{
@@ -238,5 +257,13 @@ h3 {
     
     .to-top {
         padding: 5%;
+    }
+
+    .hero img{
+        width: 100%;
+    }
+
+    .section .box .explain {
+        width: 90%;
     }
   }

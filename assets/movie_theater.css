@@ -54,12 +54,12 @@
 }
 
 .project_link{
-    font-size: 22px;
+    font-size: 1.3rem;
     text-decoration: underline;
     color: #521AF1;
-    margin: auto;
+    margin: 1.5rem auto;
     text-align: center;
-    padding-bottom: 20px;
+    
 }
 .one_image_container{
     position: relative;
@@ -119,4 +119,9 @@
     .to-top {
         padding: 5%;
     }
-  }
+
+    .project_link{
+        font-size: 1rem;
+    }
+
+}
