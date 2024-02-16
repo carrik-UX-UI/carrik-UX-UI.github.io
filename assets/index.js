@@ -32,7 +32,6 @@ const animateCursor = (e, interacting) => {
   });
 
 
-
   cursor2.animate(keyframes2, { 
     duration:100, 
     fill: "forwards" 
@@ -41,35 +40,41 @@ const animateCursor = (e, interacting) => {
 }
 
 // /   -----------------------------
+// check device with mouse 
+
+const cursorElement = document.getElementById('cursor');
+const cursor2Element = document.getElementById('cursor2');
 
 
+function handleMouseMove(event) {
+  const interacting = event.target.closest('a') !== null;
+  animateCursor(event, interacting);
+}
+
+function handlePointerFineChange(event) {
+  const cursorElements = [cursorElement, cursor2Element];
+  
+  if (event.matches) {
+    cursorElements.forEach(element => {
+      element.style.opacity = '1';
+    });
+    window.addEventListener('mousemove', handleMouseMove);
+  } else {
+    cursorElements.forEach(element => {
+      element.style.opacity = '0';
+    });
+    window.removeEventListener('mousemove', handleMouseMove);
+  }
+}
+
+const pointerFineMediaQuery = window.matchMedia('(any-pointer:fine)');
+pointerFineMediaQuery.addEventListener('change', handlePointerFineChange);
+handlePointerFineChange(pointerFineMediaQuery);
 
 // window.onmousemove = e => {
 //   const interacting = e.target.closest('a') !== null;
 //   animateCursor(e, interacting);
 // }
-
-function handleMouseMove(e) {
-  const interacting = e.target.closest('a') !== null;
-  animateCursor(e, interacting);
-}
-
-// Check for touch support initially
-const hasTouch = 'ontouchstart' in window;
-
-// Adapt approach based on detected touch support
-if (hasTouch) {
-  // Touch device: Add and remove event listener on touch events
-  window.addEventListener('touchstart', () => {
-    window.removeEventListener('mousemove', handleMouseMove);
-  });
-  // window.addEventListener('touchend', () => {
-  //   window.addEventListener('mousemove', handleMouseMove);
-  // });
-} else {
-  // Non-touch device: Attach the event listener immediately
-  window.addEventListener('mousemove', handleMouseMove);
-}
 
 
 // <!-- typing animation java -->

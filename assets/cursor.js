@@ -39,8 +39,34 @@ const animateCursor = (e, interacting) => {
   });
 }
 
+// /   -----------------------------
+// check device with mouse 
 
-window.onmousemove = e => {
-    const interacting = e.target.closest('a') !== null;
-    animateCursor(e, interacting);
+const cursorElement = document.getElementById('cursor');
+const cursor2Element = document.getElementById('cursor2');
+
+
+function handleMouseMove(event) {
+  const interacting = event.target.closest('a') !== null;
+  animateCursor(event, interacting);
+}
+
+function handlePointerFineChange(event) {
+  const cursorElements = [cursorElement, cursor2Element];
+  
+  if (event.matches) {
+    cursorElements.forEach(element => {
+      element.style.opacity = '1';
+    });
+    window.addEventListener('mousemove', handleMouseMove);
+  } else {
+    cursorElements.forEach(element => {
+      element.style.opacity = '0';
+    });
+    window.removeEventListener('mousemove', handleMouseMove);
   }
+}
+
+const pointerFineMediaQuery = window.matchMedia('(any-pointer:fine)');
+pointerFineMediaQuery.addEventListener('change', handlePointerFineChange);
+handlePointerFineChange(pointerFineMediaQuery);
