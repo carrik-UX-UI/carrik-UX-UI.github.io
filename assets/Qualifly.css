@@ -199,7 +199,7 @@ h3 {
 
 .left_img{
     max-width: 600px;
-    margin: auto;
+    margin: 1rem auto;
     margin-right: 1rem;
     float: left;
 }
@@ -263,7 +263,16 @@ h3 {
         width: 100%;
     }
 
-    .section .box .explain {
+
+    .section .box {
         width: 90%;
+      }
+    .section .box .explain {
+        width: 100%;
     }
+
+    .section .box {
+        margin: 0 auto;
+      }
+
   }

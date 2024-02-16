@@ -217,10 +217,11 @@ h4{
       padding-bottom: 40px;
     }
     .section .box img{
-      width:90%;
+      width:100%;
       padding-bottom: 20px;
     }
   /* font size */
+
     h1{
       font-size: 1.5rem;
   }
@@ -244,10 +245,11 @@ h4{
   .section{
     width: 100%;
   }
-  
+
   .brief,.description{
     width: 90%;
   }
+  
 }
  
 
