@@ -53,11 +53,7 @@ body {
 }
 
 
-.title{
-  width: 60%;
-  align-content: center;
-  padding: 60px;
-}
+
 
 
 .date {
@@ -193,9 +189,8 @@ h4{
 @media only screen and (max-width: 768px) {
 
     .hero{
-      width: 100%;
-      margin-top: 0px;
-      border-radius: 0px;
+      width: 90%;
+   
   }
     .date {
       position: absolute;
@@ -226,7 +221,11 @@ h4{
       font-size: 1.5rem;
   }
 
-    .brief,h2{
+  .brief{
+    font-size: 1.1rem;
+  }
+    
+  h2{
   font-size: 1.2rem;
   }
 

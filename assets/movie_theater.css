@@ -9,26 +9,40 @@
 
   
 .hero {
+    display: flex;
+    flex-wrap: wrap;
     background: linear-gradient(94.65deg, #8D61B7 12.81%, #815AA7 28.84%, #573A73 93.79%);
     position: relative;
     width: 85%;
-    /* height: 435px; */
+    height: 50%;
     margin:auto;
     margin-top: 100px; /* Add margin-top to move hero image below navigation bar */
-    border-radius: 20px;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+
 }
 
-.hero img{
-    /* padding: 30px; */
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 5%;
-    align-content: center;
+.hero_logo{
+    width:3rem;
+    height: min-content;
+    margin: 1rem 100% 1rem 1rem;
 }
 
+.hero_ui{
+    width: 600px;   /* max-width not work for svg  */
+    max-width: 90%;
+    margin: auto;
+    padding-left: min(2%, 50px);
+    
+}
 
-
-
+.title{
+    font-size: 3rem;
+    color: white;
+    margin: auto;
+    padding-right: min(1%, 50px);
+    text-align: center;
+  }
 
 .solution{
     display: flex;
@@ -122,6 +136,11 @@
 
     .project_link{
         font-size: 1rem;
+    }
+
+    .title{
+        font-size: 2rem;
+        margin: 1rem auto;
     }
 
 }

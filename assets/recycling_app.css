@@ -12,21 +12,45 @@
 
 
   
-.hero {
-
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(95deg, #54BC8A 12.81%, #51A47C 45.2%, #45916D 93.79%);
+    box-shadow: 0px 4px 4px 0px rgba(36, 135, 87, 0.25);
     position: relative;
     width: 85%;
-    /* height: 435px; */
+    height: 50%;
     margin:auto;
     margin-top: 100px; /* Add margin-top to move hero image below navigation bar */
-    border-radius: 20px;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+
 }
 
-.hero img{
-    width: 100%;
-
-    align-content: center;
+.hero_logo{
+    width:3rem;
+    height: min-content;
+    margin: 1rem 100% 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+    padding: 1px;
 }
+
+.hero_ui{
+    width: 300px;   /* max-width not work for svg  */
+    max-width: 100%;
+    margin: auto;
+    padding-left: min(2%, 50px);
+    
+}
+
+.title{
+    font-size: 3rem;
+    color: #ffffff;
+    margin: auto;
+    padding-right: min(1%, 50px);
+    text-align: center;
+  }
 
 
 
@@ -99,5 +123,10 @@
     
     .to-top {
         padding: 5%;
+    }
+
+    .title{
+        font-size: 2rem;
+
     }
   }
