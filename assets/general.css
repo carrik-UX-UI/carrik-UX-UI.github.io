@@ -11,6 +11,7 @@
   background-attachment: local, scroll;
   color: rgb(29, 29, 29);
   cursor: none;
+  font-family: "Hind-Regular";
   /* pointer-events: none; */
   
 }
@@ -41,6 +42,12 @@ body:hover > #cursor , body:hover > #cursor2   {
     place-items: center;
     }
    
+    #cursor img{
+      width: 100px;
+      z-index: -1;
+      opacity: 0.5;
+      position: absolute;
+    }
   /* cursor 2=  text/icon */
     #cursor2 {
     height: 30px;
@@ -87,47 +94,36 @@ body:hover > #cursor , body:hover > #cursor2   {
 
   
   /*  Navigation bar  */
+
+  header {
+    /* background-color: #f2f2f2; */
+    width: 100%;
+  }
+
+  
+
+
   .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-right:15px;
+    z-index: 2;
+  
     }
     
     .navbar.hidden {
       display: none;
     }
     
-    .navbar-links {
-      display: flex;
-      align-items: center;
-      z-index: 2;
-      padding-right: 40px;
-    }
-    
-  
-    .navbar-links ul {
-      display: flex;
-      list-style-type: none;
-      z-index: 2;
-      
-    }
-  
- 
-  
+   
     .navbar-links  a {
-      
-      color: rgb(0, 0, 0);
       text-decoration: none;
       font-size: 20px;
       font-weight: bold;
       font-family:'Hind-Bold';
-      margin-left: 30px;
+      color: rgb(29, 29, 29);
     }
   
   
@@ -135,7 +131,6 @@ body:hover > #cursor , body:hover > #cursor2   {
     .navbar-links a {
       position: relative; /* make the <a> element a positioned container */
       text-decoration: none; /* remove the default underline */
-      color: black; /* set the text color */
     }
     
     .navbar-links a::before {
@@ -155,24 +150,48 @@ body:hover > #cursor , body:hover > #cursor2   {
     }
     
     
-    
-    
-    
-    
-  
     .logo {
       display: flex;
       align-items: center;
       z-index: 2;
-      margin-left: 20px;
  
     }
     
 
     .logo img {
+      height: 4rem;
+      border-bottom-right-radius: 2em 5em;
       z-index: 2;
     }
 
+  /* scroll bar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color) ;
+    height:auto;
+    border-radius: 100px;
+  }
+  
+    /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hover-color) ;
+    
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  
+  }
+  
+  /* Hide scrollbar when not scrolling */
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background-color: transparent;
+  
+  }
   
   
 @media only screen and (max-width: 768x) {

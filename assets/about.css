@@ -1,7 +1,8 @@
 @import "/assets/font.css";
 
 :root {
-  --main-color: #010152;
+  --main-color: #2F6CA5;
+  --hover-color: #245c90;
 
 }
 
@@ -17,33 +18,9 @@ body {
   
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-  
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #0f0f77 ;
-    height:auto;
-    border-radius: 100px;
-  }
-  
-    /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-   background-color: #000035 ;
-}
- 
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  /* Hide scrollbar when not scrolling */
-  ::-webkit-scrollbar-thumb:window-inactive {
-    background-color: transparent;
-  }
 
 
-  h1 {
+h1 {
     margin-bottom:2.25rem ;
     
     display: flex;
