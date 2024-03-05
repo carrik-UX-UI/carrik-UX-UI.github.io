@@ -54,7 +54,7 @@ h1 {
   width: 150px;
   height: auto;
   padding: 10px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-radius: 10px;
   font-size: 25px;
   font-family: "Hind-Medium";
@@ -63,8 +63,8 @@ h1 {
   text-decoration: none;
   display: block;
   border-radius: 0.3125rem;
-  border: 0.125rem solid #000;
-  background: linear-gradient(to bottom, #3B49C8 50%, #FCFCFC 50%);
+  border: 0.01rem solid #747474;
+  background: linear-gradient(to bottom, #2F6CA5 50%, #FCFCFC 50%);
   background-size: 100% 200%;
   background-position: bottom;
   transition: all .5s ease-out;
@@ -85,7 +85,7 @@ a{
   width: 250px;
   height:auto;
   padding: 20px;;
-  background-color: #3B49C8;
+  background-color: #2F6CA5;
   border-radius: 10px;
   font-size: 30px;
   font-family:"Hind-Bold";

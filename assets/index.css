@@ -95,7 +95,7 @@ body {
 }
 
 .card{
-  transition: border-color 0.3s;
+  transition:0.2s;
 }
 .card:hover{
   border-color: #888888;
