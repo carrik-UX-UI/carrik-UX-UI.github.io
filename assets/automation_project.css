@@ -1,0 +1,249 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --main-color: #549bbc;
+  --main-color-dark: #457591;
+  --main-color-light: #518ca4;
+  --side-color: #F8F9FA;
+  --hover-color: #457fa0;
+  --text-dark: #263238;
+  --text-light: #607D8B;
+  --white: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(36, 135, 87, 0.25);
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+}
+
+/* ===== AUTOMATION HERO SECTION ===== */
+.automation-hero {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(95deg, var(--main-color) 12.81%, var(--main-color-light) 45.2%, var(--main-color-dark) 93.79%);
+  box-shadow: 0px 4px 4px 0px var(--shadow-medium);
+  position: relative;
+  width: 85%;
+  height: 50%;
+  margin: 100px auto 0;
+  padding-bottom: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.automation-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+}
+
+.automation-title {
+  font-size: 3rem;
+  color: var(--white);
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.automation-subtitle {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* ===== SVG CONTAINER & ANIMATION ===== */
+.svg-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+/* SVG Node Styles */
+.svg-node-group {
+  transition: transform 0.2s ease-out;
+  transform-origin: center center;
+}
+
+.svg-node-group.active {
+  transform: scale(1.08);
+}
+
+.node-rect {
+  fill: #e0f7fa;
+  stroke: var(--main-color);
+  stroke-width: 2px;
+  transition: fill 0.2s ease;
+}
+
+.node-rect.active {
+  fill: var(--main-color);
+}
+
+.node-text {
+  font-family: "Hind-Regular", sans-serif;
+  font-size: 14px;
+  fill: var(--text-dark);
+  text-anchor: middle;
+  dominant-baseline: central;
+  transition: fill 0.2s ease;
+}
+
+.node-text.active {
+  fill: var(--white);
+}
+
+.arrow-line-svg {
+  stroke: var(--text-light);
+  stroke-width: 2px;
+  marker-end: url(#arrowhead);
+}
+
+/* SVG Icons */
+.svg-icon {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.svg-icon.excel {
+  color: #1e8449;
+}
+
+/* ===== TECHNOLOGY ICONS ===== */
+.tech-icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.tech-icon i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--main-color);
+}
+
+/* ===== HIGHLIGHT BOXES ===== */
+.highlight-box {
+  background-color: var(--side-color);
+  border-left: 4px solid var(--main-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+/* ===== IMPACT SECTION ===== */
+.impact-section {
+  background: var(--side-color);
+  width: 100%;
+  padding: 20px 0;
+  margin: 2rem 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media only screen and (max-width: 768px) {
+  .automation-hero {
+    width: 90%;
+  }
+  
+  .automation-title {
+    font-size: 2rem;
+  }
+  
+  .automation-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .tech-icon i {
+    font-size: 2rem;
+  }
+  
+  .tech-icon-container {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .automation-hero {
+    width: 95%;
+    margin-top: 50px;
+  }
+  
+  .automation-title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .automation-subtitle {
+    font-size: 1rem;
+  }
+  
+  .tech-icon-container {
+    gap: 0.5rem;
+  }
+  
+  .tech-icon i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive image group for automation project */
+.automation-img-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+.automation-img {
+
+  max-height: 500px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(36, 135, 187, 0.10), 0 1.5px 8px rgba(36, 135, 187, 0.08);
+  object-fit: contain;
+  border: 3px solid #e0f7fa;
+  background: linear-gradient(135deg, #fafdff 80%, #e0f7fa 100%);
+  padding: 5px;
+  display: block;
+}
+.automation-img:hover {
+  box-shadow: 0 8px 24px rgba(36, 135, 187, 0.18), 0 2px 12px rgba(36, 135, 187, 0.12);
+  border-color: var(--main-color);
+}
+@media only screen and (max-width: 900px) {
+  .automation-img-group {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .automation-img {
+    max-width: 80%;
+    max-height: 260px;
+  }
+} 

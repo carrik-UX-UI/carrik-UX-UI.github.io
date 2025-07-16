@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Chemical Compatibility & Compliance Scripts</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0YC5LMX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LXF0YC5LMX');
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/general.css">
+    <link rel="stylesheet" href="assets/project.css">
+    <link rel="stylesheet" href="assets/automation_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/ìmages/favicon.ico">
+    <style>
+        .description {
+            font-size: 1.25rem;
+        }
+        .bg-light p, .bg-light li, .bg-light {
+            font-size: 1.18rem;
+        }
+        .division ul {
+            font-size: 1.18rem;
+        }
+        @media (max-width: 600px) {
+            .description, .bg-light p, .bg-light li, .division ul {
+                font-size: 1rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .description {
+                font-size: 1.35rem;
+            }
+            .bg-light p, .bg-light li, .bg-light {
+                font-size: 1.25rem;
+            }
+            .division ul {
+                font-size: 1.25rem;
+            }
+        }
+        @media (min-width: 1200px) {
+            .description {
+                font-size: 1.5rem;
+            }
+            .bg-light p, .bg-light li, .bg-light {
+                font-size: 1.35rem;
+            }
+            .division ul {
+                font-size: 1.35rem;
+            }
+        }
+        .solution-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .solution-heading svg {
+            flex-shrink: 0;
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 0 !important;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!-- cursor effect -->
+    <div id="cursor"></div>
+    <div id="cursor2">
+        <div id="cursor_dot"></div>
+        <div id="cursor_text">view</div>
+    </div>
+    <script src="assets/cursor.js"></script>
+
+
+        <!-- navigation bar -->
+    <header>
+    <div class="navbar" id="topbar">
+        <a href="index.html" class="logo" data-type="link">
+        <img src="assets/ìmages/Logo.svg" alt="Logo">
+        </a>
+        
+        <script src="assets/ai-chat-component.js"></script>
+        <script>
+        const aiChat = new AIChatComponent({
+            buttonText: "Ask",
+            chatTitle: "Carrik's Portfolio - AI Assistant", 
+            welcomeMessage: "Hello! I'm here to tell you about Carrik. I can share information about skills, projects, experience, and more. What would you like to know?"
+        });
+        </script>
+    </div>
+    </header>
+  
+<!-- -------------- -->
+
+    <div class="automation-hero"> 
+        <div class="automation-hero-content">
+            <div class="automation-title">Automated Chemical Compatibility & Compliance Scripts</div>
+            <div class="automation-subtitle">Streamlining Chemical Management for Safety and Efficiency</div>
+        </div>
+    </div>
+
+    <div class="division">
+        <h2>Summary</h2>
+        <div class="description">
+            I developed <strong>Python scripts</strong> to <strong>proactively automate</strong> the complex sorting of over 1,700 laboratory chemicals, streamlining the regulatory application process for Dangerous Goods (DG) storerooms with the Fire Service Department (FSD). This project <strong>optimized processes</strong> and solved a critical safety and efficiency bottleneck, reducing a multi-year manual task to a two-month automated process.
+        </div>
+
+        <h2>The Problem</h2>
+        <div class="description">
+            The existing manual process for managing chemical storage and FSD applications was slow, risky, and inefficient.
+        </div>
+        <ul style="width: 78%; margin: auto; margin-bottom: 50px; font-size: 22px;">
+            <li><strong>Slow Progress:</strong> After 2 years of manual work, only 20% of the Dangerous Goods (DG) inventory was included in the FSD application for DG storerooms.</li>
+            <li><strong>Safety Risk:</strong> Manual cross-referencing created a high potential for dangerous compatibility errors.</li>
+            <li><strong>Wasted Space:</strong> Sub-optimal sorting led to inefficient use of expensive DG storeroom space.</li>
+            <li><strong>Repetitive Work:</strong> Manually creating documentation for each storeroom application was a waste of effort.</li>
+        </ul>
+
+        <h2>My Solution</h2>
+        <div class="description">
+            Recognizing these challenges, I took the initiative to design and write two <strong>Python scripts</strong> to solve these problems, where I applied my <strong>problem-solving</strong> skills and leveraged <strong>automation</strong>.
+        </div>
+
+        <div class="row g-4" style="width: 78%; margin: auto; margin-bottom: 100px;">
+            <!-- Chemical Sorting Script -->
+            <div class="col-12">
+                <div class="bg-light p-4 rounded-3 h-100 border border-primary-subtle">
+                    <h3 class="h5 fw-bold text-primary mb-3 solution-heading" style="padding: 0px;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h16m-9 4h5m-5 4h10"></path>
+                        </svg>
+                        Chemical Sorting Script
+                    </h3>
+                    <p class="mb-0">
+                        This script efficiently processes a master list of chemicals against a defined set of compatibility rules. Utilizing <strong>advanced algorithm design and data analysis</strong>, it automatically <strong>sorts all 1,700+ chemicals based on their compatibility</strong> into safe, compatible groups for storage, generating optimal packing lists for each room. This approach ensures precise <strong>data management</strong> and adherence to safety protocols.
+                    </p>
+                </div>
+            </div>
+            <!-- SDS Documentation Script -->
+            <div class="col-12">
+                <div class="bg-light p-4 rounded-3 h-100 border border-primary-subtle">
+                    <h3 class="h5 fw-bold text-primary mb-3 solution-heading" style="padding: 0px;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        SDS Documentation Script
+                    </h3>
+                    <p class="mb-0">
+                        This script takes the precisely sorted lists and automatically gathers the correct Safety Data Sheets (SDS) for each storeroom. It organizes the required documents into separate folders, making FSD applications simple and error-free through automated <strong>documentation management</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Key Results & Impact</h2>
+        <div class="description">
+            The scripts I created delivered significant, measurable improvements for the department, highlighting effective <strong>process optimization</strong>.
+        </div>
+        <ul style="width: 78%; margin: auto; margin-bottom: 50px; font-size: 22px;">
+            <li><strong>Rapid 100% Compliance:</strong> Completed the entire inventory in just 2 months, a task that was projected to <strong>take years</strong> to finish manually.</li>
+            <li><strong>Eliminated Human Error:</strong> Automated checks removed the risk of dangerous storage mistakes, ensuring higher safety standards.</li>
+            <li><strong>Optimized Storage Space:</strong> Ensured the most efficient use of all DG storerooms, leading to significant cost savings.</li>
+            <li><strong>Saved Hundreds of Hours:</strong> Drastically reduced the manual labor required for compliance and documentation, freeing up staff for other critical tasks.</li>
+        </ul>
+    </div>
+
+    <div style="overflow: auto;">
+        <a href="Automated Delivery Order Paperwork Upload.html" class="button">Next Project</a>
+    </div>
+
+    <a href="#topbar" class="to-top" id="goTopBtn">
+        <img src="assets/ìmages/to-the-top.svg" alt="Back to Top">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/project.js"></script>
+</body>
+</html>

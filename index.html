@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -30,20 +29,7 @@
 
 
 <body>
-    <!-- navigation bar -->
-    <header>
-      <div class="navbar">
-        <a href="/" class="logo" data-type="link">
-          <img src="assets/ìmages/Logo.svg" alt="Logo">
-        </a>
-        <nav class="navbar-links link">
-              <a href="/about.html">About</a>   
-        </nav>
-      </div>
-    
-    
-    </header>
-    
+
   <!-- cursor -->
   <div id="cursor">
   </div>
@@ -51,9 +37,26 @@
     <div id="cursor_dot"></div>
     <!-- by default opacity is zero -->
     <div id="cursor_text">view</div>
-  </div>
+  </div>  
 
 
+  <!-- navigation bar -->
+  <header>
+    <div class="navbar" id="topbar">
+      <a href="index.html" class="logo" data-type="link">
+        <img src="assets/ìmages/Logo.svg" alt="Logo">
+      </a>
+      
+      <script src="assets/ai-chat-component.js"></script>
+      <script>
+        const aiChat = new AIChatComponent({
+            buttonText: "Ask",
+            chatTitle: "Carrik's Portfolio - AI Assistant", 
+            welcomeMessage: "Hello! I'm here to tell you about Carrik. I can share information about skills, projects, experience, and more. What would you like to know?"
+        });
+      </script>
+    </div>
+  </header>
   
 <!-- -------------------------------------------------------------------------------- -->
   
@@ -68,70 +71,100 @@
 
   <div class="container py-5"  >
 
+    <!-- Automation Projects Section -->
+    <h2 class="mb-4">Automation Projects</h2>
+    <div class="row g-5 mb-5">
+      <div class="col-lg-4">
+        <div class = "card">
+          <a href="Automated Delivery Order Paperwork Upload.html" class="card-link">
+          <div class = "card-body">
+            <h4 class="card-title automation-gradient-title text-body">Automated Delivery Order Paperwork Upload</h4>
+            <p class="card-subtitle text-body-tertiary">RPA, Python, OCR, Selenium, Pandas</p>
+          </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class = "card">
+          <a href="Automated Chemical Compatibility & Compliance Scripts.html" class="card-link">
+          <div class = "card-body">
+            <h4 class="card-title automation-gradient-title text-body">Automated Chemical Regulation Tool</h4>
+            <p class="card-subtitle text-body-tertiary">Python, Data Automation, Chemical Safety</p>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- UX/UI Projects Section -->
+    <h2 class="mb-4">UX/UI Projects</h2>
     <div class="row g-5">
-
       <div class="col-lg-4">
         <div class = "card">
           <a href="Qualifly.html" class="card-link">
           <img class="card-img-top" src="assets/ìmages/index/QualiFly.svg" style="scale: 0.98;">
           <div class = "card-body">
-            
             <h4 class="card-title text-body ">Edu-Tech Products For Student</h4>
-            <p class="card-subtitle  text-body-tertiary ">QualiFly Education - Internship Project</p>
+            <p class="card-subtitle  text-body-tertiary ">Internship Project - Figma</p>
           </div>
           </a>
-      
         </div>
       </div>
-
       <div class="col-lg-4">
         <div class = "card">
           <a href="movie_theater.html" class="card-link">
           <img class="card-img-top" src="assets/ìmages/index/Movie_theater.svg" style="scale: 0.98;">
           <div class = "card-body">
-            
             <h4 class="card-title text-body">Movie Theater Responsive Website</h4>
-            <p class="card-subtitle  text-body-tertiary">Personal Project</p> 
+            <p class="card-subtitle  text-body-tertiary">Personal Project - Adobe XD</p> 
           </div>
           </a>
-      
         </div>
       </div>
-      
       <div class="col-lg-4">
         <div class = "card">
           <a href="bakery_app.html" class="card-link">
           <img class="card-img-top" src="assets\ìmages\index\Bakery_app.svg" style="scale: 0.98;">
           <div class = "card-body">
-            
             <h4 class="card-title text-body">Nutrient-Conscious Bakery App</h4>
-            <p class="card-subtitle  text-body-tertiary">Have a bread - Personal Project</p> 
+            <p class="card-subtitle  text-body-tertiary">Personal Project - Figma</p> 
           </div>
           </a>
-      
         </div>
       </div>
-
       <div class="col-lg-4">
         <div class = "card">
           <a href="recycling_app.html" class="card-link">
           <img class="card-img-top" src="assets\ìmages\index\Recycling_app.png" style="scale: 0.98;">
           <div class = "card-body">
-            
             <h4 class="card-title text-body">Recycling App And Website</h4>
-            <p class="card-subtitle  text-body-tertiary">Personal Project</p> 
+            <p class="card-subtitle  text-body-tertiary">Personal Project - Figma</p> 
           </div>
           </a>
-      
         </div>
       </div>
- 
-
     </div>
 
- 
-
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Carrik | Portfolio. Built & designed by Carrik. 
+    <span style="gap:0.2em;">
+      <img src="assets/ìmages/index/github_icon.svg" alt="GitHub" width="18" height="18" style="vertical-align:middle;">
+      <a href="https://github.com/carrik-UX-UI/carrik-UX-UI.github.io" target="_blank" rel="noopener">GitHub</a>
+    </span>
+    &nbsp;|&nbsp;
+    <span style="gap:0.2em;">
+      <img src="assets/ìmages/index/LinkedIn_icon.svg" alt="LinkedIn" width="18" height="18" style="vertical-align:middle;">
+      <a href="https://www.linkedin.com/in/carrik-choi/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </span>
+    &nbsp;|&nbsp;
+    <span style="gap:0.2em;">
+      <img src="assets/ìmages/index/email_icon.svg" alt="Email" width="18" height="18" style="vertical-align:middle;">
+      <a href="mailto:carrik.uxui@gmail.com" aria-label="Email">Email</a>
+    </span>.
+  </footer>
 
 
 
@@ -141,3 +174,5 @@
 </body>
 <script src="assets/index.js">
 </script>
+
+

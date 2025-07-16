@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Delivery Order Paperwork Upload</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0YC5LMX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LXF0YC5LMX');
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/general.css">
+    <link rel="stylesheet" href="assets/project.css">
+    <link rel="stylesheet" href="assets/automation_project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/ìmages/favicon.ico">
+</head>
+
+
+
+<body>
+
+    <!-- cursor effect -->
+    <div id="cursor"></div>
+    <div id="cursor2">
+        <div id="cursor_dot"></div>
+        <div id="cursor_text">view</div>
+    </div>
+    <script src="assets/cursor.js"></script>
+
+
+  <!-- navigation bar -->
+  <header>
+    <div class="navbar" id="topbar">
+      <a href="index.html" class="logo" data-type="link">
+        <img src="assets/ìmages/Logo.svg" alt="Logo">
+      </a>
+      
+      <script src="assets/ai-chat-component.js"></script>
+      <script>
+        const aiChat = new AIChatComponent({
+            buttonText: "Ask",
+            chatTitle: "Carrik's Portfolio - AI Assistant", 
+            welcomeMessage: "Hello! I'm here to tell you about Carrik. I can share information about skills, projects, experience, and more. What would you like to know?"
+        });
+      </script>
+    </div>
+  </header>
+  
+<!-- -------------- -->
+
+    <div class="automation-hero"> 
+        <div class="automation-hero-content">
+            <div class="automation-title">Automated Delivery Order Paperwork Upload</div>
+            <div class="automation-subtitle">Transforming manual processes into efficient, automated workflows</div>
+        </div>
+    </div>
+
+    <div class="division">
+        <h2>The Problem: Manual Bottleneck in Order Confirmation</h2>
+        <div class="description">
+            At the laboratory supply center where I worked, over 80 orders are processed daily. Each order requires manually uploading signed delivery orders to our system for account charging. This repetitive, error-prone task consumed approximately <strong>3.5 hours daily</strong> for administrative staff, impacting efficiency and billing accuracy.
+        </div>
+
+        <h2>My Solution</h2>
+        <h3>Intelligent Document Automation</h3>
+        <div class="description">
+            I developed a Python-based automation solution to streamline this critical process. Leveraging <strong>Optical Character Recognition (OCR)</strong>, <strong>Selenium</strong> for web automation, and <strong>Pandas</strong> for data management, this script transforms a tedious manual workflow into a rapid, accurate operation.
+        </div>
+        <div class="automation-img-group">
+            <img src="assets/ìmages/DN_upload_automation/Paper.jpg" alt="Delivery Order" class="automation-img">
+            <img src="assets\ìmages\DN_upload_automation\ocr recording.gif" alt="Delivery Order Animation" class="automation-img">
+        </div>
+
+        <h3>Key Features:</h3>
+        <ul style="width: 78%; margin: auto; margin-bottom: 50px; font-size: 22px;">
+            <li><strong>Smart Document Processing:</strong> OCR scans physical delivery orders, and custom logic ensures <strong>99% accuracy</strong> in renaming documents with correct order numbers.</li>
+            <li><strong>Automated System Interaction:</strong> The script automatically navigates our internal system, finds the relevant order page, and uploads the corresponding delivery order.</li>
+            <li><strong>Proactive Error Handling:</strong> It identifies and skips problematic orders, ensuring only valid transactions proceed.</li>
+            <li><strong>Comprehensive Logging:</strong> The script meticulously logs every step of the process into a detailed Excel file for transparency and debugging.</li>
+            <li><strong>User-Friendly Deployment:</strong> Packaged as a standalone program, it runs on local computers without any pre-installation.</li>
+        </ul>
+
+        <div class="svg-container" id="automation-demo-container">
+            <svg width="650" height="250" viewBox="0 0 650 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .node-rect { fill: #e0f7fa; stroke: var(--main-color); stroke-width: 2px; }
+                    .node-text { font-family: "Hind-Regular", sans-serif; font-size: 14px; fill: var(--text-dark); text-anchor: middle; dominant-baseline: central; }
+                    .arrow-line-svg { stroke: var(--text-light); stroke-width: 2px; }
+                    .svg-node-group.active .node-rect { fill: var(--main-color); }
+                    .svg-node-group.active .node-text { fill: var(--white); }
+                    .svg-node-group {
+                        transition: transform 0.2s ease-out;
+                        transform-origin: center center;
+                    }
+                    .svg-node-group.active {
+                        transform: scale(1.08);
+                    }
+                </style>
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#607d8b"></polygon>
+                    </marker>
+                </defs>
+
+                <g id="node-group-scan" class="svg-node-group">
+                    <rect x="20" y="70" width="120" height="60" rx="8" ry="8" class="node-rect"></rect>
+                    <text x="80" y="100" class="node-text">Scan</text>
+                </g>
+
+                <g id="node-group-ocr" class="svg-node-group">
+                    <rect x="180" y="70" width="120" height="60" rx="8" ry="8" class="node-rect"></rect>
+                    <text x="240" y="100" class="node-text">OCR &amp; Rename</text>
+                </g>
+
+                <g id="node-group-script" class="svg-node-group">
+                    <rect x="340" y="70" width="120" height="60" rx="8" ry="8" class="node-rect"></rect>
+                    <text x="400" y="100" class="node-text">Python Script</text>
+                </g>
+
+                <g id="node-group-upload" class="svg-node-group">
+                    <rect x="500" y="70" width="120" height="60" rx="8" ry="8" class="node-rect"></rect>
+                    <text x="560" y="100" class="node-text">Web Upload</text>
+                </g>
+
+                <g id="node-group-logging" class="svg-node-group">
+                    <rect x="340" y="160" width="120" height="60" rx="8" ry="8" class="node-rect"></rect>
+                    <text x="400" y="190" class="node-text">Logging (Excel)</text>
+                </g>
+
+                <line x1="145" y1="100" x2="172" y2="100" class="arrow-line-svg" marker-end="url(#arrowhead)"></line>
+                <line x1="305" y1="100" x2="332" y2="100" class="arrow-line-svg" marker-end="url(#arrowhead)"></line>
+                <line x1="465" y1="100" x2="492" y2="100" class="arrow-line-svg" marker-end="url(#arrowhead)"></line>
+                <line x1="400" y1="130" x2="400" y2="152" class="arrow-line-svg" marker-end="url(#arrowhead)"></line>
+            </svg>
+
+            <i id="documentIcon" class="fas fa-file-alt svg-icon" style="opacity: 0;"></i>
+            <i id="excelIcon" class="fas fa-file-excel svg-icon excel" style="opacity: 0;"></i>
+        </div>
+
+        <div class="tech-icon-container">
+            <div class="tech-icon">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="tech-icon">
+                <i class="fas fa-globe"></i>
+                <span>Selenium</span>
+            </div>
+            <div class="tech-icon">
+                <i class="fas fa-table"></i>
+                <span>Pandas</span>
+            </div>
+            <div class="tech-icon">
+                <i class="fas fa-file-alt"></i>
+                <span>OCR</span>
+            </div>
+            <div class="tech-icon">
+                <i class="fas fa-file-excel"></i>
+                <span>Logging</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="impact-section">
+        <h2>Impact: Significant Time & Efficiency Gains</h2>
+        <div class="description">
+            This automation delivered substantial improvements, directly impacting productivity and operational costs:
+        </div>
+        <ul style="width: 78%; margin: auto; margin-bottom: 50px; font-size: 22px;">
+            <li><strong>85% Time Savings:</strong> Processing 60-70 orders now takes <strong>just 15 minutes</strong>, down from 3.5 hours. This frees up nearly half a day for administrative staff.</li>
+            <li><strong>99% Accuracy:</strong> Drastically reduced manual corrections and re-uploads, leading to cleaner data and fewer billing discrepancies.</li>
+            <li><strong>Improved Data Integrity:</strong> Automated checks minimize downstream errors, ensuring reliable order confirmation.</li>
+            <li><strong>Enhanced Productivity:</strong> Eliminates a repetitive task, boosting team efficiency and job satisfaction.</li>
+        </ul>
+
+        <div class="svg-container">
+            <svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .bar-label { font-family: "Hind-Regular", sans-serif; font-size: 16px; fill: var(--text-dark); text-anchor: middle; }
+                    .time-text { font-family: "Hind-Regular", sans-serif; font-size: 24px; font-weight: bold; fill: var(--text-dark); text-anchor: middle; }
+                    .savings-text { font-family: "Hind-Regular", sans-serif; font-size: 28px; font-weight: bold; fill: var(--main-color); text-anchor: middle; }
+                    .clock-icon { fill: var(--text-light); }
+                </style>
+
+                <rect x="50" y="50" width="200" height="100" fill="#ffecb3" rx="10" ry="10" />
+                <text x="150" y="30" class="bar-label">Before Automation</text>
+                <text x="150" y="90" class="time-text">3.5 hrs</text>
+                <text x="150" y="120" class="bar-label">(Manual)</text>
+
+                <line x1="250" y1="100" x2="350" y2="100" stroke="#607d8b" stroke-width="3" marker-end="url(#arrowhead-impact)" />
+                <defs>
+                    <marker id="arrowhead-impact" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#607d8b" />
+                    </marker>
+                </defs>
+
+                <rect x="350" y="50" width="200" height="100" fill="#c8e6c9" rx="10" ry="10" />
+                <text x="450" y="30" class="bar-label">After Automation</text>
+                <text x="450" y="90" class="time-text">15 min</text>
+                <text x="450" y="120" class="bar-label">(Automated)</text>
+
+                <text x="300" y="185" class="savings-text">85% Daily Time Savings!</text>
+            </svg>
+        </div>
+    </div>
+
+    <div style="overflow: auto;">
+        <a href="recycling_app.html" class="button" ">Next Project</a>
+    </div>
+
+    <a href="#topbar" class="to-top" id="goTopBtn">
+        <img src="assets/ìmages/to-the-top.svg" alt="Back to Top">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/project.js"></script>
+
+    <script>
+        // Global declarations
+        let documentIcon;
+        let excelIcon;
+        const nodes = ['node-group-scan', 'node-group-ocr', 'node-group-script', 'node-group-upload', 'node-group-logging'];
+        const nodeElements = {};
+
+        let animationTimeout;
+
+        // Function to get the center X and Y position of an element relative to the SVG container
+        function getElementCenter(nodeGroupId) {
+            const group = nodeElements[nodeGroupId] ? nodeElements[nodeGroupId].group : null;
+            const rect = nodeElements[nodeGroupId] ? nodeElements[nodeGroupId].rect : null;
+
+            if (!group || !rect) {
+                console.error(`getElementCenter: Node group or rect not found for ID ${nodeGroupId}.`);
+                return { x: 0, y: 0 };
+            }
+
+            const bbox = rect.getBBox();
+            const svgElement = document.querySelector('.svg-container svg');
+            if (!svgElement) {
+                console.error('getElementCenter: SVG element not found within .svg-container.');
+                return { x: 0, y: 0 };
+            }
+            const svgRect = svgElement.getBoundingClientRect();
+            const containerRect = document.getElementById('automation-demo-container').getBoundingClientRect();
+
+            const svgX = bbox.x + bbox.width / 2;
+            const svgY = bbox.y + bbox.height / 2;
+
+            const scaleX = svgRect.width / svgElement.viewBox.baseVal.width;
+            const scaleY = svgRect.height / svgElement.viewBox.baseVal.height;
+
+            const cssX = (svgX * scaleX) + (svgRect.left - containerRect.left);
+            const cssY = (svgY * scaleY) + (svgRect.top - containerRect.top);
+
+            return { x: cssX, y: cssY };
+        }
+
+        // Function to highlight a node
+        function highlightNode(nodeGroupId) {
+            nodes.forEach(id => {
+                if (nodeElements[id] && nodeElements[id].group) {
+                    nodeElements[id].group.classList.remove('active');
+                }
+            });
+            if (nodeElements[nodeGroupId] && nodeElements[nodeGroupId].group) {
+                nodeElements[nodeGroupId].group.classList.add('active');
+            } else {
+                console.error(`highlightNode: Attempted to highlight non-existent node group: ${nodeGroupId}`);
+            }
+        }
+
+        // Animation sequence for one "order"
+        function animateDocumentCycle() {
+            animationTimeout = setTimeout(() => {
+                if (documentIcon) {
+                    documentIcon.style.transition = 'none';
+                    documentIcon.style.opacity = '0';
+                }
+                if (excelIcon) {
+                    excelIcon.style.opacity = '0';
+                }
+                nodes.forEach(id => {
+                    if (nodeElements[id] && nodeElements[id].group) {
+                        nodeElements[id].group.classList.remove('active');
+                    }
+                });
+
+                let currentDelay = 100;
+
+                // Step 1: Document appears at Scan
+                animationTimeout = setTimeout(() => {
+                    if (documentIcon) {
+                        documentIcon.style.transition = 'transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out';
+                        documentIcon.style.opacity = '1';
+                        const initialPos = getElementCenter(nodes[0]);
+                        documentIcon.style.left = `${initialPos.x}px`;
+                        documentIcon.style.top = `${initialPos.y}px`;
+                        documentIcon.style.transform = 'translate(-50%, -50%)';
+                    }
+                    highlightNode(nodes[0]);
+                }, currentDelay);
+                currentDelay += 1000;
+
+                // Step 2: Move to OCR & Rename
+                animationTimeout = setTimeout(() => {
+                    const ocrPos = getElementCenter(nodes[1]);
+                    if (documentIcon) {
+                        documentIcon.style.left = `${ocrPos.x}px`;
+                        documentIcon.style.top = `${ocrPos.y}px`;
+                    }
+                    highlightNode(nodes[1]);
+                }, currentDelay);
+                currentDelay += 1000;
+
+                // Step 3: Move to Python Script
+                animationTimeout = setTimeout(() => {
+                    const scriptPos = getElementCenter(nodes[2]);
+                    if (documentIcon) {
+                        documentIcon.style.left = `${scriptPos.x}px`;
+                        documentIcon.style.top = `${scriptPos.y}px`;
+                    }
+                    highlightNode(nodes[2]);
+                }, currentDelay);
+                currentDelay += 1000;
+
+                // Step 4: Logging Branch - Excel icon appears at Logging (Excel)
+                animationTimeout = setTimeout(() => {
+                    const loggingPos = getElementCenter(nodes[4]);
+                    if (excelIcon) {
+                        excelIcon.style.transition = 'transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out';
+                        excelIcon.style.left = `${loggingPos.x}px`;
+                        excelIcon.style.top = `${loggingPos.y}px`;
+                        excelIcon.style.transform = 'translate(-50%, -50%)';
+                        excelIcon.style.opacity = '1';
+                    }
+                    highlightNode(nodes[4]);
+                }, currentDelay);
+                currentDelay += 1000;
+
+                // Step 5: Excel icon disappears, Logging node unhighlights
+                animationTimeout = setTimeout(() => {
+                    if (excelIcon) {
+                        excelIcon.style.opacity = '0';
+                    }
+                    if (nodeElements[nodes[4]] && nodeElements[nodes[4]].group) {
+                        nodeElements[nodes[4]].group.classList.remove('active');
+                    }
+                }, currentDelay);
+                currentDelay += 500;
+
+                // Step 6: Document icon continues to Web Upload
+                animationTimeout = setTimeout(() => {
+                    const uploadPos = getElementCenter(nodes[3]);
+                    if (documentIcon) {
+                        documentIcon.style.left = `${uploadPos.x}px`;
+                        documentIcon.style.top = `${uploadPos.y}px`;
+                    }
+                    highlightNode(nodes[3]);
+                }, currentDelay);
+                currentDelay += 1000;
+
+                // Step 7: Document icon fades out, all nodes unhighlight, restart cycle
+                animationTimeout = setTimeout(() => {
+                    if (documentIcon) {
+                        documentIcon.style.opacity = '0';
+                    }
+                    nodes.forEach(id => {
+                        if (nodeElements[id] && nodeElements[id].group) {
+                            nodeElements[id].group.classList.remove('active');
+                        }
+                    });
+                    animateDocumentCycle();
+                }, currentDelay);
+
+            }, 3000);
+        }
+
+        // Adjust icon positions on resize
+        function adjustIconPositions() {
+            documentIcon = document.getElementById('documentIcon');
+            excelIcon = document.getElementById('excelIcon');
+
+            nodes.forEach(id => {
+                nodeElements[id] = {
+                    group: document.getElementById(id),
+                    rect: document.querySelector(`#${id} .node-rect`),
+                    text: document.querySelector(`#${id} .node-text`)
+                };
+                if (!nodeElements[id].group || !nodeElements[id].rect || !nodeElements[id].text) {
+                    console.error(`adjustIconPositions: Missing elements for node: ${id}`);
+                }
+            });
+
+            if (documentIcon) {
+                const initialPos = getElementCenter(nodes[0]);
+                documentIcon.style.left = `${initialPos.x}px`;
+                documentIcon.style.top = `${initialPos.y}px`;
+                documentIcon.style.transform = 'translate(-50%, -50%)';
+            } else {
+                console.error("adjustIconPositions: documentIcon not found.");
+            }
+
+            if (excelIcon) {
+                const loggingPos = getElementCenter(nodes[4]);
+                excelIcon.style.left = `${loggingPos.x}px`;
+                excelIcon.style.top = `${loggingPos.y}px`;
+                excelIcon.style.transform = 'translate(-50%, -50%)';
+            } else {
+                console.error("adjustIconPositions: excelIcon not found.");
+            }
+        }
+
+        // Initial setup and start animation
+        document.addEventListener('DOMContentLoaded', function() {
+            documentIcon = document.getElementById('documentIcon');
+            excelIcon = document.getElementById('excelIcon');
+
+            nodes.forEach(id => {
+                nodeElements[id] = {
+                    group: document.getElementById(id),
+                    rect: document.querySelector(`#${id} .node-rect`),
+                    text: document.querySelector(`#${id} .node-text`)
+                };
+                if (!nodeElements[id].group || !nodeElements[id].rect || !nodeElements[id].text) {
+                    console.error(`DOMContentLoaded: Missing elements for node: ${id}`);
+                }
+            });
+
+            if (documentIcon && excelIcon) {
+                adjustIconPositions();
+                animateDocumentCycle();
+            } else {
+                console.error("DOMContentLoaded: Critical elements not found. Animation cannot start.");
+                if (!documentIcon) console.error("DOMContentLoaded: documentIcon is null.");
+                if (!excelIcon) console.error("DOMContentLoaded: excelIcon is null.");
+            }
+        });
+
+        // Recalculate positions on window resize
+        window.addEventListener('resize', adjustIconPositions);
+    </script>
+</body>
+</html>

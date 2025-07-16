@@ -27,28 +27,8 @@
 
 
 
-  <!-- navigation bar -->
-  <header>
-    
 
-    <div class="navbar" id="topbar">
-      <a href="/" class="logo">
-        <img src="assets\ìmages\Logo.svg" alt="Logo">
-      </a>
-  
-
-      <div class="navbar-links">
-            <a href="/about.html">About</a>  
-      </div>
-      
-    </div>
-  
-
-  </header>
-
-
-    
-<body >
+<body>
 
 <!-- cursor effect -->
   <div id="cursor"></div>
@@ -59,8 +39,27 @@
   </div>
   <script src="assets\cursor.js">
   </script>
-<!-- -------------- -->
 
+
+  <!-- navigation bar -->
+  <header>
+    <div class="navbar" id="topbar">
+      <a href="index.html" class="logo" data-type="link">
+        <img src="assets/ìmages/Logo.svg" alt="Logo">
+      </a>
+      
+      <script src="assets/ai-chat-component.js"></script>
+      <script>
+        const aiChat = new AIChatComponent({
+            buttonText: "Ask",
+            chatTitle: "Carrik's Portfolio - AI Assistant", 
+            welcomeMessage: "Hello! I'm here to tell you about Carrik. I can share information about skills, projects, experience, and more. What would you like to know?"
+        });
+      </script>
+    </div>
+  </header>
+  
+<!-- -------------- -->
 
   <div class="hero"> 
     <img src="assets\ìmages\bakery_app\hero.svg" alt="Hero Image">
@@ -146,7 +145,7 @@
   <a href="https://docs.google.com/presentation/d/1-gcRNPuvR4duDs2maCt_d5fUBlQ_VQx_bpFAO5Df-3w/edit?usp=sharing" target="_blank" >View more detail about the project</a>
   </div>
   <div style="overflow: auto;"> 
-	<a href="/movie_theater.html" class="button">Next Project</a>
+	<a href="movie_theater.html" class="button">Next Project</a>
   </div>
 
 
