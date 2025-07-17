@@ -228,3 +228,30 @@ h4{
  
 
 
+/* ------------------- Footer Styles ------------------- */
+.footer {
+  width: 100%;
+  background: #fff;
+  border-top: 2px solid rgba(58, 58, 58, 0.5);
+  color: #666;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-family: "Hind-Regular", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  letter-spacing: 0.01em;
+}
+.footer a {
+  color: #2F6CA5;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: var(--hover-color);
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    font-size: 0.95rem;
+    padding: 1.2rem 0 0.7rem 0;
+  }
+}
