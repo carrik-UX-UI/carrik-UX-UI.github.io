@@ -79,7 +79,7 @@ handlePointerFineChange(pointerFineMediaQuery);
 
 // <!-- typing animation java -->
 
-const words = ["UX Designer", "UI Designer", "Web Developer", "AI Developer"];
+const words = ["UX Designer", "UI Designer", "Web Developer"];
 let cursorIndex = 0;
 let wordIndex = 0;
 

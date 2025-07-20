@@ -275,8 +275,10 @@ body {
   }
 }
 
+
+
 .automation-gradient-title {
-  background: linear-gradient(95deg, #549bbc 12.81%, #518ca4 45.2%, #457591 93.79%);
+  background: linear-gradient(95deg, #549bbc 12.81%, #518ca4 45.2%, #568aa8 93.79%);
   color: #fff !important;
   padding: 0.5em;
   border-radius: 0.375em;
