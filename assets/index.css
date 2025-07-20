@@ -248,20 +248,24 @@ body {
 }
 
 /* ------------------- Footer Styles ------------------- */
-.footer {
-  width: 100%;
-  background: #fff;
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
   border-top: 2px solid rgba(47, 108, 165, 0.5);
-  color: var(--text-light);
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  font-family: "Hind-Regular", sans-serif;
+  padding: 1rem 0 1rem 0;
   font-size: 1.1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   letter-spacing: 0.01em;
 }
+.footer_description{
+  color: #666;
+}
 .footer a {
-  color: var(--main-color);
+  color: #2F6CA5;
   text-decoration: underline;
   transition: color 0.2s;
 }
@@ -270,6 +274,11 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
     font-size: 0.95rem;
     padding: 1.2rem 0 0.7rem 0;
   }
