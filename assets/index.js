@@ -126,11 +126,15 @@ typeWord(words[wordIndex]);
 // resize page to reload
 
 window.addEventListener('resize', function () { 
-  "use strict";
-  window.location.reload(); 
-  // console.log("resize");  // test print  if resize function is triggered
+  // Only reload if no input or textarea is focused, and only on desktop
+  if (
+    window.matchMedia('(pointer: fine)').matches && // likely desktop
+    !(document.activeElement && 
+      (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA'))
+  ) {
+    window.location.reload(); 
+  }
 });
-
 
 
 

@@ -132,11 +132,9 @@ class AIChatComponent {
                 background: linear-gradient(90deg, #86CFFF 0%, #C8FB74 100%);
                 color: white;
                 padding: 10px 15px;
-                
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border-radius: 12px 12px 0 0;
             }
             
             .chat-header-title {
@@ -177,7 +175,7 @@ class AIChatComponent {
             }
             
             .chat-open #chatBody {
-                height: 400px;
+                height: 450px;
             }
             
             #messages {
@@ -301,8 +299,17 @@ class AIChatComponent {
             
             @media (max-width: 768px) {
                 .chat-open #chatContainer {
-                    width: 90%;
-                    max-width: 350px;
+                    width: 100%;
+                    height:100vh;
+                    top:0;
+                    right:0;
+                    border-radius: 0;
+                }
+                .chat-open #chatBody {
+                    height: 90%
+                }
+                .input-area {
+                    margin-bottom:20%;
                 }
             }
         `;
