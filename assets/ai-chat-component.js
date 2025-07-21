@@ -23,9 +23,11 @@ class AIChatComponent {
     }
     
     async init() {
+        document.body.style.overflow = '';
         await this.loadMarkedScript();
         this.createStyles();
         this.createHTML();
+        if (this.overlay) this.overlay.style.display = 'none';
         this.bindEvents();
         this.loadConversationHistory();
     }
@@ -296,20 +298,52 @@ class AIChatComponent {
                 transform: scale(1.05);
                 opacity: 0.9;
             }
-            
+            /* Overlay for mobile */
+            #ai-chat-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(30, 41, 59, 0.45);
+                z-index: 998;
+                pointer-events: auto;
+                transition: opacity 0.3s;
+            }
+            .chat-open #ai-chat-overlay {
+                display: block;
+            }
+            @media (min-width: 769px) {
+                #ai-chat-overlay {
+                    display: none !important;
+                }
+            }
             @media (max-width: 768px) {
                 .chat-open #chatContainer {
                     width: 100%;
-                    height:100vh;
+                    height: 100dvh;
                     top:0;
                     right:0;
                     border-radius: 0;
+                    display: flex;
+                    flex-direction: column;
                 }
+
+                #chatHeader {
+                    font-weight: bold;
+                    padding: 20px 15px;
+                    flex-shrink: 0;
+                }
+
                 .chat-open #chatBody {
-                    height: 90%
+                    height: 100%;
+                    flex-grow: 1;
                 }
+                
                 .input-area {
-                    margin-bottom:20%;
+                    margin-bottom: 0;
+                    padding-bottom: calc(15px + env(safe-area-inset-bottom));
                 }
             }
         `;
@@ -328,7 +362,10 @@ class AIChatComponent {
             <span class="ai-button-text">${this.options.buttonText}</span>
             <img src="${this.options.buttonIcon}" alt="AI" class="ai-button-icon">
         `;
-        
+        // Create overlay (for mobile)
+        const overlay = document.createElement('div');
+        overlay.id = 'ai-chat-overlay';
+        document.body.appendChild(overlay);
         // Create chat container
         const chatContainer = document.createElement('div');
         chatContainer.id = 'chatContainer';
@@ -351,10 +388,8 @@ class AIChatComponent {
                 </div>
             </div>
         `;
-        
         document.body.appendChild(aiButton);
         document.body.appendChild(chatContainer);
-        
         // Store references
         this.aiButton = aiButton;
         this.chatContainer = chatContainer;
@@ -362,6 +397,7 @@ class AIChatComponent {
         this.userInput = document.getElementById('userInput');
         this.sendBtn = document.getElementById('sendBtn');
         this.messages = document.getElementById('messages');
+        this.overlay = overlay;
     }
     
     bindEvents() {
@@ -425,6 +461,10 @@ class AIChatComponent {
         this.isChatOpen = true;
         document.body.classList.add('chat-open');
         this.aiButton.style.display = 'none';
+        // Prevent scroll on mobile
+        if (window.innerWidth <= 768) {
+            document.body.style.overflow = 'hidden';
+        }
     }
     
     closeChat() {
@@ -432,6 +472,10 @@ class AIChatComponent {
         document.body.classList.remove('chat-open');
         setTimeout(() => {
             this.aiButton.style.display = '';
+            // Restore scroll on mobile
+            if (window.innerWidth <= 768) {
+                document.body.style.overflow = '';
+            }
         }, 400);
     }
     
@@ -540,6 +584,7 @@ class AIChatComponent {
     destroy() {
         if (this.aiButton) this.aiButton.remove();
         if (this.chatContainer) this.chatContainer.remove();
+        if (this.overlay) this.overlay.remove();
         const styles = document.getElementById('ai-chat-styles');
         if (styles) styles.remove();
     }
