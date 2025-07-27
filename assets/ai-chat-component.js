@@ -193,7 +193,7 @@ class AIChatComponent {
             }
             
             .message {
-                max-width: 80%;
+                max-width: 90%;
                 padding: 12px 16px;
                 border-radius: 18px;
                 animation: fadeIn 0.3s ease;
@@ -350,6 +350,52 @@ class AIChatComponent {
                     padding-bottom: calc(15px + env(safe-area-inset-bottom));
                 }
             }
+            #ai-prompt-buttons {
+                display: flex;
+                gap: 10px;
+                margin: 10px 20px;
+                flex-wrap: wrap;
+            }
+            .ai-prompt-btn {
+                display: flex;
+                align-items: center;
+                background:rgb(233, 246, 255);
+                border-radius: 20px;
+                padding: 6px 14px 6px 16px;
+                font-size: 0.98rem;
+                font-weight: 500;
+                color: #1f2937;
+                box-shadow: 0 2px 8px rgba(134, 207, 255, 0.10);
+                cursor: pointer;
+                position: relative;
+                margin-bottom: 4px;
+                transition: background 0.2s;
+            }
+            .ai-prompt-btn:hover {
+                background: #c8fb74;
+            }
+            .ai-prompt-btn-text {
+                margin-right: 8px;
+                user-select: none;
+            }
+            .ai-prompt-btn-close {
+                background: none;
+                border: none;
+                color: #7a8ca5;
+                font-size: 1.1em;
+                cursor: pointer;
+                border-radius: 50%;
+                width: 22px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+            }
+            .ai-prompt-btn-close:hover {
+                background: #f0f5ff;
+                color: #e57373;
+            }
         `;
         
         const styleSheet = document.createElement('style');
@@ -380,10 +426,9 @@ class AIChatComponent {
                     <img src="${this.options.closeIcon}" alt="Close" style="width: 0.9em; height: 0.9em;">
                 </button>
             </div>
-            
             <div id="chatBody">
                 <div id="messages"></div>
-                
+                <div id="ai-prompt-buttons"></div>
                 <div class="input-area">
                     <input type="text" id="userInput" placeholder="Type a message...">
                     <button id="sendBtn">
@@ -402,6 +447,43 @@ class AIChatComponent {
         this.sendBtn = document.getElementById('sendBtn');
         this.messages = document.getElementById('messages');
         this.overlay = overlay;
+        this.promptButtonsContainer = document.getElementById('ai-prompt-buttons');
+        this.createPromptButtons();
+    }
+
+    createPromptButtons() {
+        if (!this.promptButtonsContainer) return;
+        this.promptButtonsContainer.innerHTML = '';
+        const prompts = [
+            { key: 'aiPromptBtn1Dismissed', text: " Tell me about Carrik's background." },
+            { key: 'aiPromptBtn2Dismissed', text: "What are Carrik's skills and strengths ? " }
+            
+        ];
+        prompts.forEach((prompt, idx) => {
+            if (localStorage.getItem(prompt.key)) return;
+            const btn = document.createElement('div');
+            btn.className = 'ai-prompt-btn';
+            btn.innerHTML = `
+                <span class="ai-prompt-btn-text">${prompt.text}</span>
+                <button class="ai-prompt-btn-close" title="Hide">&times;</button>
+            `;
+            btn.querySelector('.ai-prompt-btn-text').addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.userInput.value = prompt.text;
+                this.sendMessage();
+                localStorage.setItem(prompt.key, '1');
+                btn.remove();
+            });
+            btn.querySelector('.ai-prompt-btn-close').addEventListener('click', (e) => {
+                e.stopPropagation();
+                localStorage.setItem(prompt.key, '1');
+                btn.remove();
+            });
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            this.promptButtonsContainer.appendChild(btn);
+        });
     }
     
     bindEvents() {
