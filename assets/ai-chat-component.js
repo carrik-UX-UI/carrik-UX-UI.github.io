@@ -127,7 +127,9 @@ class AIChatComponent {
             }
             
             .chat-open #chatContainer {
-                width: 350px;
+                width: 450px;
+                height: 90dvh;
+                
             }
             
             #chatHeader {
@@ -177,7 +179,7 @@ class AIChatComponent {
             }
             
             .chat-open #chatBody {
-                height: 450px;
+                height: 100%;
             }
             
             #messages {
@@ -262,6 +264,8 @@ class AIChatComponent {
                 padding: 15px;
                 border-top: 1px solid #e6f0fa;
                 gap: 10px;
+                margin-bottom:50px;
+
             }
             
             #userInput {
